@@ -145,7 +145,9 @@ document.addEventListener("click", (event) => {
 document.addEventListener("DOMContentLoaded", () => {
   // --- Код для модального окна и авторизации ---
   const loginModal = document.getElementById("loginModal");
-  const openLoginModalBtns = document.querySelectorAll(".open-login-modal-btn");
+   const openLoginModalBtns = document.querySelectorAll(
+    ".open-login-modal-btn, .open-login-modal-btn-mob"
+  );
   const closeButton = document.querySelector(".modal-content .close-button");
   const togglePasswordVisibility = document.querySelector(
     ".toggle-password-visibility"
