@@ -67,6 +67,80 @@ export function updateFavIconsState() {
   });
 }
 
+// --- Логика для mobile-footer-buttons (скрытые меню в футере) ---
+
+// 1. Объявление переменных и получение элементов DOM
+const companyButton = document.querySelector(".company-button");
+const companyDropdown = document.querySelector(".company-dropdown");
+const buyersButton = document.querySelector(".buyers-button");
+const buyersDropdown = document.querySelector(".buyers-dropdown");
+
+// 2. Функция-обработчик для переключения видимости дропдауна
+function toggleDropdown(button, dropdown) {
+  // Проверяем, открыт ли в данный момент другой дропдаун (гарантируем, что открыт только один)
+  const isCompanyOpen =
+    dropdown === buyersDropdown && companyDropdown.classList.contains("open");
+  const isBuyersOpen =
+    dropdown === companyDropdown && buyersDropdown.classList.contains("open"); // Если другой дропдаун открыт, закрываем его
+
+  if (isCompanyOpen) {
+    companyDropdown.classList.remove("open");
+    companyButton.querySelector("i").classList.remove("fa-rotate-180");
+  }
+  if (isBuyersOpen) {
+    buyersDropdown.classList.remove("open");
+    buyersButton.querySelector("i").classList.remove("fa-rotate-180");
+  } // Переключаем класс 'open' для текущего дропдауна (открытие/закрытие)
+
+  dropdown.classList.toggle("open"); // Переворачиваем иконку шеврона для визуального эффекта
+
+  const icon = button.querySelector("i");
+  icon.classList.toggle("fa-rotate-180");
+}
+
+// 3. Обработчики кликов на кнопках
+if (companyButton && companyDropdown) {
+  companyButton.addEventListener("click", () => {
+    toggleDropdown(companyButton, companyDropdown);
+  });
+}
+
+if (buyersButton && buyersDropdown) {
+  buyersButton.addEventListener("click", () => {
+    toggleDropdown(buyersButton, buyersDropdown);
+  });
+}
+
+// 4. Логика закрытия дропдауна при клике вне его
+document.addEventListener("click", (event) => {
+  const isClickInsideCompany =
+    (companyButton && companyButton.contains(event.target)) ||
+    (companyDropdown && companyDropdown.contains(event.target));
+  const isClickInsideBuyers =
+    (buyersButton && buyersButton.contains(event.target)) ||
+    (buyersDropdown && buyersDropdown.contains(event.target)); // Закрыть Company, если клик был вне его, и он открыт
+
+  if (
+    companyDropdown &&
+    !isClickInsideCompany &&
+    companyDropdown.classList.contains("open")
+  ) {
+    companyDropdown.classList.remove("open");
+    companyButton.querySelector("i").classList.remove("fa-rotate-180");
+  } // Закрыть Buyers, если клик был вне его, и он открыт
+
+  if (
+    buyersDropdown &&
+    !isClickInsideBuyers &&
+    buyersDropdown.classList.contains("open")
+  ) {
+    buyersDropdown.classList.remove("open");
+    buyersButton.querySelector("i").classList.remove("fa-rotate-180");
+  }
+});
+
+// --- Конец логики для mobile-footer-buttons ---
+
 // --- Логика, которая запускается при загрузке страницы (НЕ экспортируется) ---
 document.addEventListener("DOMContentLoaded", () => {
   // --- Код для модального окна и авторизации ---
