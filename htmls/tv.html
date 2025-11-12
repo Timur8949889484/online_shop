@@ -1,0 +1,2049 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Телевизоры</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="icon" type="image/png" href="../images/logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="top-header">
+      <div class="header-row top-line">
+        <div class="location">
+          <span><i class="fas fa-location-dot"></i> Бишкек</span>
+          <button id="theme-toggle" class="theme-toggle-button">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+        <div class="contacts"></div>
+        <div class="contacts">
+          <a
+            href="https://example.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span><i class="fab fa-instagram insta-icon"></i></span>
+          </a>
+          <a
+            href="https://example.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span><i class="fab fa-whatsapp insta-icon"></i></span>
+          </a>
+          <a href="tel:+996550556612">+996 550-556-612</a>
+          <span><i class="fas fa-map"></i></span>
+          <a href="adress.html">Магазины</a>
+          <a href="vacancies.html">Вакансии</a>
+        </div>
+      </div>
+
+      <div class="header-row middle-line">
+        <a href="../index.html" class="logo desktop-logo">
+          <img src="../images/logo.png" alt="DNS Logo" height="40" />
+        </a>
+        <div class="header-search-container">
+          <div class="search-bar">
+            <span class="icon-desktop"><i class="fas fa-bars"></i></span>
+            <span class="icon-mobile"
+              ><i class="fas fa-magnifying-glass"></i
+            ></span>
+
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Поиск по сайту"
+              autocomplete="off"
+            />
+            <span
+              id="clear-search"
+              class="clear-search-icon"
+              style="display: none"
+              >&times;</span
+            >
+          </div>
+          <section class="search-results-container">
+            <div id="product-results-grid"></div>
+          </section>
+        </div>
+
+        <div class="icons upper-icons">
+          <div class="icon-container">
+            <a href="favorite.html" class="fav-link">
+              <i class="far fa-heart fav-icon fas"></i>
+              <span>Избранное</span>
+            </a>
+            <span class="fav-counter">0</span>
+          </div>
+          <div class="icon-container">
+            <a href="cart.html" class="cart-link">
+              <i class="fas fa-shopping-cart cart-icon"></i>
+              <span>Корзина</span>
+            </a>
+            <span class="cart-counter">0</span>
+          </div>
+          <a href="#" class="open-login-modal-btn">
+            <i class="fas fa-user"></i>
+            <span>Войти</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="header-row bottom-bar nav-categories">
+        <a href="phones.html">Смартфоны</a>
+        <a href="tv.html">Телевизоры</a>
+        <a href="laptop.html">Ноутбуки</a>
+        <a href="tablets.html">Планшеты</a>
+      </div>
+    </div>
+
+    <div class="catalog-content-wrapper">
+      <h1 class="cat-page-title cat-page-title-mobile">
+        Телевизоры в Кыргызстане
+      </h1>
+      <aside class="filters-sidebar">
+        <h2>Фильтры</h2>
+        <div class="filter-group">
+          <div class="filter-header active">
+            <span><i class="fas fa-chevron-down"></i> Цена</span>
+          </div>
+          <div class="filter-content price-filter active">
+            <div class="price-inputs">
+              <div class="price-input-wrapper">
+                <input
+                  type="text"
+                  placeholder="от 12000"
+                  value=""
+                  class="price-min"
+                  data-min-value="12000"
+                  data-max-value="200000"
+                  maxlength="10"
+                />
+                <span class="clear-input-btn"
+                  ><i class="fas fa-times-circle"></i
+                ></span>
+              </div>
+              <div class="price-input-wrapper">
+                <input
+                  type="text"
+                  placeholder="до 200 000"
+                  value=""
+                  class="price-max"
+                  data-min-value="12000"
+                  data-max-value="200000"
+                  maxlength="10"
+                />
+                <span class="clear-input-btn"
+                  ><i class="fas fa-times-circle"></i
+                ></span>
+              </div>
+            </div>
+            <label class="filter-checkbox">
+              <input
+                type="checkbox"
+                name="price_range_checkbox"
+                data-min="0"
+                data-max="30000"
+              />
+              <span class="checkbox-custom"></span> Менее 30 000 сом
+            </label>
+            <label class="filter-checkbox">
+              <input
+                type="checkbox"
+                name="price_range_checkbox"
+                data-min="30001"
+                data-max="70000"
+              />
+              <span class="checkbox-custom"></span> 30 001 - 70 000 сом
+            </label>
+            <label class="filter-checkbox">
+              <input
+                type="checkbox"
+                name="price_range_checkbox"
+                data-min="70001"
+                data-max="150000"
+              />
+              <span class="checkbox-custom"></span> 70 001 - 150 000 сом
+            </label>
+            <label class="filter-checkbox">
+              <input
+                type="checkbox"
+                name="price_range_checkbox"
+                data-min="150001"
+                data-max="9999999"
+              />
+              <span class="checkbox-custom"></span> 150 001 сом и более
+            </label>
+            <button class="filter-reset-btn">Сбросить</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-header">
+            <span><i class="fas fa-chevron-down"></i> Бренд</span>
+          </div>
+          <div class="filter-content brand-filter">
+            <label class="filter-checkbox">
+              <input type="checkbox" name="brand" value="Samsung" />
+              <span class="checkbox-custom"></span> Samsung
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="brand" value="LG" />
+              <span class="checkbox-custom"></span> LG
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="brand" value="Sony" />
+              <span class="checkbox-custom"></span> Sony
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="brand" value="Hisense" />
+              <span class="checkbox-custom"></span> Hisense
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="brand" value="Philips" />
+              <span class="checkbox-custom"></span> Philips
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="brand" value="TCL" />
+              <span class="checkbox-custom"></span> TCL
+            </label>
+            <button class="filter-reset-btn">Сбросить</button>
+          </div>
+        </div>
+
+        <!-- НОВЫЙ Блок фильтров: Размер экрана -->
+        <div class="filter-group">
+          <div class="filter-header">
+            <span
+              ><i class="fas fa-chevron-down"></i> Размер экрана (дюймы)</span
+            >
+          </div>
+          <div class="filter-content screen-size-filter">
+            <label class="filter-checkbox">
+              <input type="checkbox" name="screen_size" value="0-32" />
+              <span class="checkbox-custom"></span> До 32"
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="screen_size" value="33-49" />
+              <span class="checkbox-custom"></span> 33" - 49"
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="screen_size" value="50-64" />
+              <span class="checkbox-custom"></span> 50" - 64"
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="screen_size" value="65-999" />
+              <span class="checkbox-custom"></span> 65" и более
+            </label>
+            <button class="filter-reset-btn">Сбросить</button>
+          </div>
+        </div>
+
+        <!-- НОВЫЙ Блок фильтров: Разрешение -->
+        <div class="filter-group">
+          <div class="filter-header">
+            <span><i class="fas fa-chevron-down"></i> Разрешение</span>
+          </div>
+          <div class="filter-content resolution-filter">
+            <label class="filter-checkbox">
+              <input type="checkbox" name="resolution" value="Full HD" />
+              <span class="checkbox-custom"></span> Full HD
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="resolution" value="4K UHD" />
+              <span class="checkbox-custom"></span> 4K UHD
+            </label>
+
+            <button class="filter-reset-btn">Сбросить</button>
+          </div>
+        </div>
+
+        <!-- НОВЫЙ Блок фильтров: Технология экрана -->
+        <div class="filter-group">
+          <div class="filter-header">
+            <span><i class="fas fa-chevron-down"></i> Технология экрана</span>
+          </div>
+          <div class="filter-content technology-filter">
+            <label class="filter-checkbox">
+              <input type="checkbox" name="technology" value="OLED" />
+              <span class="checkbox-custom"></span> OLED
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="technology" value="QLED" />
+              <span class="checkbox-custom"></span> QLED
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="technology" value="Mini-LED" />
+              <span class="checkbox-custom"></span> Mini-LED
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="technology" value="LED" />
+              <span class="checkbox-custom"></span> LED
+            </label>
+            <button class="filter-reset-btn">Сбросить</button>
+          </div>
+        </div>
+
+        <!-- НОВЫЙ Блок фильтров: Smart TV -->
+        <div class="filter-group">
+          <div class="filter-header">
+            <span><i class="fas fa-chevron-down"></i> Smart TV</span>
+          </div>
+          <div class="filter-content smart-tv-filter">
+            <label class="filter-checkbox">
+              <input type="checkbox" name="smart_tv" value="true" />
+              <span class="checkbox-custom"></span> Да
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="smart_tv" value="false" />
+              <span class="checkbox-custom"></span> Нет
+            </label>
+            <button class="filter-reset-btn">Сбросить</button>
+          </div>
+        </div>
+
+        <button class="show-results-btn">Показать</button>
+      </aside>
+
+      <main class="cat-main-container product-catalog-main-content">
+        <section class="product-catalog-section">
+          <h1 class="cat-page-title cat-page-title-desktop">
+            Телевизоры в Кыргызстане
+          </h1>
+
+          <div class="product-grid active" id="page-1">
+            <div
+              class="product-card"
+              data-id="samsung-neo-qled-qn90c"
+              data-price="150000"
+              data-brand="Samsung"
+              data-name="Samsung Neo QLED QN90C"
+              data-image="https://i.postimg.cc/tT9pk29g/Samsung-The-Serif-LS01-B.jpg"
+              data-screensize="55"
+              data-resolution="4K UHD"
+              data-technology="QLED"
+              data-smart-tv="true"
+              data-refresh-rate="120"
+            >
+              <a
+                href="product-detail.html?id=samsung-neo-qled-qn90c"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/tT9pk29g/Samsung-The-Serif-LS01-B.jpg"
+                    alt="Samsung Neo QLED QN90C"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Samsung Neo QLED QN90C</div>
+              <div class="product-price">
+                150000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="samsung-neo-qled-qn90c"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="samsung-neo-qled-qn90c"
+                ></i>
+              </div>
+            </div>
+
+            <!-- LG OLED C3 -->
+            <div
+              class="product-card"
+              data-id="lg-oled-c3"
+              data-price="180000"
+              data-brand="LG"
+              data-name="LG OLED C3"
+              data-image="https://i.postimg.cc/cLVJRRKK/LG-OLED-C3.png"
+              data-screensize="65"
+              data-resolution="4K UHD"
+              data-technology="OLED"
+              data-smart-tv="true"
+              data-refresh-rate="120"
+            >
+              <a href="product-detail.html?id=lg-oled-c3" class="product-link">
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/cLVJRRKK/LG-OLED-C3.png"
+                    alt="LG OLED C3"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">LG OLED C3</div>
+              <div class="product-price">
+                180000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="lg-oled-c3"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="lg-oled-c3"
+                ></i>
+              </div>
+            </div>
+
+            <!-- Sony Bravia X85L -->
+            <div
+              class="product-card"
+              data-id="sony-bravia-x85l"
+              data-price="95000"
+              data-brand="Sony"
+              data-name="Sony Bravia X85L"
+              data-image="https://i.postimg.cc/Y2nMN6Zp/Sony-Bravia-X85-L.jpg"
+              data-screensize="50"
+              data-resolution="4K UHD"
+              data-technology="LED"
+              data-smart-tv="true"
+              data-refresh-rate="120"
+            >
+              <a
+                href="product-detail.html?id=sony-bravia-x85l"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/Y2nMN6Zp/Sony-Bravia-X85-L.jpg"
+                    alt="Sony Bravia X85L"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Sony Bravia X85L</div>
+              <div class="product-price">
+                95000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="sony-bravia-x85l"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="sony-bravia-x85l"
+                ></i>
+              </div>
+            </div>
+
+            <!-- Hisense U8K -->
+            <div
+              class="product-card"
+              data-id="hisense-u8k"
+              data-price="110000"
+              data-brand="Hisense"
+              data-name="Hisense U8K"
+              data-image="https://i.postimg.cc/j2Z5PBNK/Hisense-U8-K.png"
+              data-screensize="55"
+              data-resolution="4K UHD"
+              data-technology="Mini-LED"
+              data-smart-tv="true"
+              data-refresh-rate="144"
+            >
+              <a href="product-detail.html?id=hisense-u8k" class="product-link">
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/j2Z5PBNK/Hisense-U8-K.png"
+                    alt="Hisense U8K"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Hisense U8K</div>
+              <div class="product-price">
+                110000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="hisense-u8k"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="hisense-u8k"
+                ></i>
+              </div>
+            </div>
+
+            <!-- Samsung The Frame LS03B -->
+            <div
+              class="product-card"
+              data-id="samsung-the-frame-ls03b"
+              data-price="85000"
+              data-brand="Samsung"
+              data-name="Samsung The Frame LS03B"
+              data-image="https://i.postimg.cc/xdv9LWD7/Samsung-The-Frame-LS03-B.jpg"
+              data-screensize="50"
+              data-resolution="4K UHD"
+              data-technology="QLED"
+              data-smart-tv="true"
+              data-refresh-rate="60"
+            >
+              <a
+                href="product-detail.html?id=samsung-the-frame-ls03b"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/xdv9LWD7/Samsung-The-Frame-LS03-B.jpg"
+                    alt="Samsung The Frame LS03B"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Samsung The Frame LS03B</div>
+              <div class="product-price">
+                85000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="samsung-the-frame-ls03b"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="samsung-the-frame-ls03b"
+                ></i>
+              </div>
+            </div>
+
+            <!-- LG Full HD 24TL510S-PZ -->
+            <div
+              class="product-card"
+              data-id="lg-full-hd-24tl510s-pz"
+              data-price="15000"
+              data-brand="LG"
+              data-name="LG Full HD 24TL510S-PZ"
+              data-image="https://i.postimg.cc/2jw3sLtJ/LG-Full-HD-24-TL510-S-PZ.jpg"
+              data-screensize="24"
+              data-resolution="Full HD"
+              data-technology="LED"
+              data-smart-tv="true"
+              data-refresh-rate="60"
+            >
+              <a
+                href="product-detail.html?id=lg-full-hd-24tl510s-pz"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/2jw3sLtJ/LG-Full-HD-24-TL510-S-PZ.jpg"
+                    alt="LG Full HD 24TL510S-PZ"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">LG Full HD 24TL510S-PZ</div>
+              <div class="product-price">
+                15000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="lg-full-hd-24tl510s-pz"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="lg-full-hd-24tl510s-pz"
+                ></i>
+              </div>
+            </div>
+
+            <!-- Philips The One PUS8808 -->
+            <div
+              class="product-card"
+              data-id="philips-the-one-pus8808"
+              data-price="75000"
+              data-brand="Philips"
+              data-name="Philips The One PUS8808"
+              data-image="https://i.postimg.cc/fyTWz5PP/Philips-The-One-PUS8808.jpg"
+              data-screensize="55"
+              data-resolution="4K UHD"
+              data-technology="LED"
+              data-smart-tv="true"
+              data-refresh-rate="120"
+            >
+              <a
+                href="product-detail.html?id=philips-the-one-pus8808"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/fyTWz5PP/Philips-The-One-PUS8808.jpg"
+                    alt="Philips The One PUS8808"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Philips The One PUS8808</div>
+              <div class="product-price">
+                75000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="philips-the-one-pus8808"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="philips-the-one-pus8808"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="samsung-qn85c"
+              data-price="130000"
+              data-brand="Samsung"
+              data-name="Samsung QN85C"
+              data-image="https://i.postimg.cc/zXvD4tKb/Samsung-QN85-C.jpg"
+              data-screensize="55"
+              data-resolution="4K UHD"
+              data-technology="Neo QLED"
+              data-smart-tv="true"
+              data-refresh-rate="120"
+            >
+              <a
+                href="product-detail.html?id=samsung-qn85c"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/zXvD4tKb/Samsung-QN85-C.jpg"
+                    alt="Samsung QN85C"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Samsung QN85C</div>
+              <div class="product-price">
+                130000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="samsung-qn85c"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="samsung-qn85c"
+                ></i>
+              </div>
+            </div>
+
+            <!-- LG QNED80 -->
+            <div
+              class="product-card"
+              data-id="lg-qned80"
+              data-price="90000"
+              data-brand="LG"
+              data-name="LG QNED80"
+              data-image="https://i.postimg.cc/pTvX7PJR/LG-QNED80.jpg"
+              data-screensize="65"
+              data-resolution="4K UHD"
+              data-technology="QNED"
+              data-smart-tv="true"
+              data-refresh-rate="120"
+            >
+              <a href="product-detail.html?id=lg-qned80" class="product-link">
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/pTvX7PJR/LG-QNED80.jpg"
+                    alt="LG QNED80"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">LG QNED80</div>
+              <div class="product-price">
+                90000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="lg-qned80"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="lg-qned80"
+                ></i>
+              </div>
+            </div>
+
+            <!-- Sony Bravia X90K -->
+            <div
+              class="product-card"
+              data-id="sony-bravia-x90k"
+              data-price="115000"
+              data-brand="Sony"
+              data-name="Sony Bravia X90K"
+              data-image="https://i.postimg.cc/BQjsm8f2/Sony-Bravia-X90-K.jpg"
+              data-screensize="55"
+              data-resolution="4K UHD"
+              data-technology="Full Array LED"
+              data-smart-tv="true"
+              data-refresh-rate="120"
+            >
+              <a
+                href="product-detail.html?id=sony-bravia-x90k"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/BQjsm8f2/Sony-Bravia-X90-K.jpg"
+                    alt="Sony Bravia X90K"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Sony Bravia X90K</div>
+              <div class="product-price">
+                115000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="sony-bravia-x90k"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="sony-bravia-x90k"
+                ></i>
+              </div>
+            </div>
+
+            <!-- Hisense U7K -->
+            <div
+              class="product-card"
+              data-id="hisense-u7k"
+              data-price="80000"
+              data-brand="Hisense"
+              data-name="Hisense U7K"
+              data-image="https://i.postimg.cc/TPDpF78q/Hisense-U7-K.png"
+              data-screensize="50"
+              data-resolution="4K UHD"
+              data-technology="Mini-LED"
+              data-smart-tv="true"
+              data-refresh-rate="120"
+            >
+              <a href="product-detail.html?id=hisense-u7k" class="product-link">
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/TPDpF78q/Hisense-U7-K.png"
+                    alt="Hisense U7K"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Hisense U7K</div>
+              <div class="product-price">
+                80000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="hisense-u7k"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="hisense-u7k"
+                ></i>
+              </div>
+            </div>
+
+            <!-- TCL Q7 -->
+            <div
+              class="product-card"
+              data-id="tcl-q7"
+              data-price="65000"
+              data-brand="TCL"
+              data-name="TCL Q7"
+              data-image="https://i.postimg.cc/htxnqHjj/TCL-Q7.jpg"
+              data-screensize="55"
+              data-resolution="4K UHD"
+              data-technology="QLED"
+              data-smart-tv="true"
+              data-refresh-rate="120"
+            >
+              <a href="product-detail.html?id=tcl-q7" class="product-link">
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/htxnqHjj/TCL-Q7.jpg"
+                    alt="TCL Q7"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">TCL Q7</div>
+              <div class="product-price">
+                65000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="tcl-q7"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="tcl-q7"
+                ></i>
+              </div>
+            </div>
+
+            <!-- Xiaomi TV A2 43 -->
+            <div
+              class="product-card"
+              data-id="xiaomi-tv-a2-43"
+              data-price="35000"
+              data-brand="Xiaomi"
+              data-name="Xiaomi TV A2 43"
+              data-image="https://i.postimg.cc/bJYfkrRD/Xiaomi-TV-A2-43.jpg"
+              data-screensize="43"
+              data-resolution="4K UHD"
+              data-technology="LED"
+              data-smart-tv="true"
+              data-refresh-rate="60"
+            >
+              <a
+                href="product-detail.html?id=xiaomi-tv-a2-43"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/bJYfkrRD/Xiaomi-TV-A2-43.jpg"
+                    alt="Xiaomi TV A2 43"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Xiaomi TV A2 43</div>
+              <div class="product-price">
+                35000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="xiaomi-tv-a2-43"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="xiaomi-tv-a2-43"
+                ></i>
+              </div>
+            </div>
+
+            <!-- Philips OLED808 -->
+            <div
+              class="product-card"
+              data-id="philips-oled808"
+              data-price="190000"
+              data-brand="Philips"
+              data-name="Philips OLED808"
+              data-image="https://i.postimg.cc/V6FLP2KM/Philips-OLED808.jpg"
+              data-screensize="65"
+              data-resolution="4K UHD"
+              data-technology="OLED"
+              data-smart-tv="true"
+              data-refresh-rate="120"
+            >
+              <a
+                href="product-detail.html?id=philips-oled808"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/V6FLP2KM/Philips-OLED808.jpg"
+                    alt="Philips OLED808"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Philips OLED808</div>
+              <div class="product-price">
+                190000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="philips-oled808"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="philips-oled808"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="samsung-qn90a"
+              data-price="140000"
+              data-brand="Samsung"
+              data-name="Samsung QN90A"
+              data-image="https://i.postimg.cc/zXQDNCFd/Samsung-QN90-A.jpg"
+              data-screensize="65"
+              data-resolution="4K UHD"
+              data-technology="Neo QLED"
+              data-smart-tv="true"
+              data-refresh-rate="120"
+            >
+              <a
+                href="product-detail.html?id=samsung-qn90a"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/zXQDNCFd/Samsung-QN90-A.jpg"
+                    alt="Samsung QN90A"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Samsung QN90A</div>
+              <div class="product-price">
+                140000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="samsung-qn90a"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="samsung-qn90a"
+                ></i>
+              </div>
+            </div>
+
+            <!-- LG OLED G2 -->
+            <div
+              class="product-card"
+              data-id="lg-oled-g2"
+              data-price="200000"
+              data-brand="LG"
+              data-name="LG OLED G2"
+              data-image="https://i.postimg.cc/hGTtpXx2/LG-OLED-G2.jpg"
+              data-screensize="77"
+              data-resolution="4K UHD"
+              data-technology="OLED evo"
+              data-smart-tv="true"
+              data-refresh-rate="120"
+            >
+              <a href="product-detail.html?id=lg-oled-g2" class="product-link">
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/hGTtpXx2/LG-OLED-G2.jpg"
+                    alt="LG OLED G2"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">LG OLED G2</div>
+              <div class="product-price">
+                200000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="lg-oled-g2"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="lg-oled-g2"
+                ></i>
+              </div>
+            </div>
+
+            <!-- Sony Bravia A80J -->
+            <div
+              class="product-card"
+              data-id="sony-bravia-a80j"
+              data-price="160000"
+              data-brand="Sony"
+              data-name="Sony Bravia A80J"
+              data-image="https://i.postimg.cc/Z5yb5WfJ/Sony-Bravia-A80-J.jpg"
+              data-screensize="65"
+              data-resolution="4K UHD"
+              data-technology="OLED"
+              data-smart-tv="true"
+              data-refresh-rate="120"
+            >
+              <a
+                href="product-detail.html?id=sony-bravia-a80j"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/Z5yb5WfJ/Sony-Bravia-A80-J.jpg"
+                    alt="Sony Bravia A80J"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Sony Bravia A80J</div>
+              <div class="product-price">
+                160000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="sony-bravia-a80j"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="sony-bravia-a80j"
+                ></i>
+              </div>
+            </div>
+
+            <!-- Hisense U6G -->
+            <div
+              class="product-card"
+              data-id="hisense-u6g"
+              data-price="60000"
+              data-brand="Hisense"
+              data-name="Hisense U6G"
+              data-image="https://i.postimg.cc/Y9BhH6Mc/Hisense-U6-G.jpg"
+              data-screensize="55"
+              data-resolution="4K UHD"
+              data-technology="ULED"
+              data-smart-tv="true"
+              data-refresh-rate="60"
+            >
+              <a href="product-detail.html?id=hisense-u6g" class="product-link">
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/Y9BhH6Mc/Hisense-U6-G.jpg"
+                    alt="Hisense U6G"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Hisense U6G</div>
+              <div class="product-price">
+                60000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="hisense-u6g"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="hisense-u6g"
+                ></i>
+              </div>
+            </div>
+
+            <!-- TCL C725 -->
+            <div
+              class="product-card"
+              data-id="tcl-c725"
+              data-price="50000"
+              data-brand="TCL"
+              data-name="TCL C725"
+              data-image="https://i.postimg.cc/X7tWmVnm/TCL-C725.png"
+              data-screensize="50"
+              data-resolution="4K UHD"
+              data-technology="QLED"
+              data-smart-tv="true"
+              data-refresh-rate="60"
+            >
+              <a href="product-detail.html?id=tcl-c725" class="product-link">
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/X7tWmVnm/TCL-C725.png"
+                    alt="TCL C725"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">TCL C725</div>
+              <div class="product-price">
+                50000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="tcl-c725"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="tcl-c725"
+                ></i>
+              </div>
+            </div>
+
+            <!-- Xiaomi TV Q1E 75 -->
+            <div
+              class="product-card"
+              data-id="xiaomi-tv-q1e-75"
+              data-price="120000"
+              data-brand="Xiaomi"
+              data-name="Xiaomi TV Q1E 75"
+              data-image="https://i.postimg.cc/bJ6cTP66/Xiaomi-TV-Q1-E-75.jpg"
+              data-screensize="75"
+              data-resolution="4K UHD"
+              data-technology="QLED"
+              data-smart-tv="true"
+              data-refresh-rate="120"
+            >
+              <a
+                href="product-detail.html?id=xiaomi-tv-q1e-75"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/bJ6cTP66/Xiaomi-TV-Q1-E-75.jpg"
+                    alt="Xiaomi TV Q1E 75"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Xiaomi TV Q1E 75</div>
+              <div class="product-price">
+                120000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="xiaomi-tv-q1e-75"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="xiaomi-tv-q1e-75"
+                ></i>
+              </div>
+            </div>
+
+            <!-- Philips PUS7906 -->
+            <div
+              class="product-card"
+              data-id="philips-pus7906"
+              data-price="45000"
+              data-brand="Philips"
+              data-name="Philips PUS7906"
+              data-image="https://i.postimg.cc/T17dpgM3/Philips-PUS7906.png"
+              data-screensize="43"
+              data-resolution="4K UHD"
+              data-technology="LED"
+              data-smart-tv="true"
+              data-refresh-rate="60"
+            >
+              <a
+                href="product-detail.html?id=philips-pus7906"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/T17dpgM3/Philips-PUS7906.png"
+                    alt="Philips PUS7906"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Philips PUS7906</div>
+              <div class="product-price">
+                45000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="philips-pus7906"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="philips-pus7906"
+                ></i>
+              </div>
+            </div>
+
+            <!-- LG OLED A2 -->
+            <div
+              class="product-card"
+              data-id="lg-oled-a2"
+              data-price="100000"
+              data-brand="LG"
+              data-name="LG OLED A2"
+              data-image="https://i.postimg.cc/fTqyLnDf/LG-OLED-A2.jpg"
+              data-screensize="48"
+              data-resolution="4K UHD"
+              data-technology="OLED"
+              data-smart-tv="true"
+              data-refresh-rate="60"
+            >
+              <a href="product-detail.html?id=lg-oled-a2" class="product-link">
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/fTqyLnDf/LG-OLED-A2.jpg"
+                    alt="LG OLED A2"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">LG OLED A2</div>
+              <div class="product-price">
+                100000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="lg-oled-a2"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="lg-oled-a2"
+                ></i>
+              </div>
+            </div>
+
+            <!-- Sony Bravia X75K -->
+            <div
+              class="product-card"
+              data-id="sony-bravia-x75k"
+              data-price="70000"
+              data-brand="Sony"
+              data-name="Sony Bravia X75K"
+              data-image="https://i.postimg.cc/SsVqvCKf/Sony-Bravia-X75-K.jpg"
+              data-screensize="55"
+              data-resolution="4K UHD"
+              data-technology="LED"
+              data-smart-tv="true"
+              data-refresh-rate="60"
+            >
+              <a
+                href="product-detail.html?id=sony-bravia-x75k"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/SsVqvCKf/Sony-Bravia-X75-K.jpg"
+                    alt="Sony Bravia X75K"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Sony Bravia X75K</div>
+              <div class="product-price">
+                70000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="sony-bravia-x75k"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="sony-bravia-x75k"
+                ></i>
+              </div>
+            </div>
+
+            <!-- Hisense A6H -->
+            <div
+              class="product-card"
+              data-id="hisense-a6h"
+              data-price="30000"
+              data-brand="Hisense"
+              data-name="Hisense A6H"
+              data-image="https://i.postimg.cc/KjZjKm1J/Hisense-A6-H.png"
+              data-screensize="43"
+              data-resolution="4K UHD"
+              data-technology="LED"
+              data-smartTv="true"
+              data-refresh-rate="60"
+            >
+              <a href="product-detail.html?id=hisense-a6h" class="product-link">
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/KjZjKm1J/Hisense-A6-H.png"
+                    alt="Hisense A6H"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Hisense A6H</div>
+              <div class="product-price">
+                30000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="hisense-a6h"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="hisense-a6h"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="sony-bravia-kd43x85k"
+              data-price="65000"
+              data-brand="Sony"
+              data-name="Sony Bravia KD43X85K"
+              data-image="https://i.postimg.cc/NFMYqF9q/Sony-Bravia-KD43-X85-K.jpg"
+              data-screensize="43"
+              data-resolution="4K UHD"
+              data-technology="LED"
+              data-smart-tv="true"
+              data-refresh-rate="120"
+            >
+              <a
+                href="product-detail.html?id=sony-bravia-kd43x85k"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/NFMYqF9q/Sony-Bravia-KD43-X85-K.jpg"
+                    alt="Sony Bravia KD43X85K"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Sony Bravia KD43X85K</div>
+              <div class="product-price">
+                65000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="sony-bravia-kd43x85k"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="sony-bravia-kd43x85k"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="samsung-the-serif-ls01b"
+              data-price="95000"
+              data-brand="Samsung"
+              data-name="Samsung The Serif LS01B"
+              data-image="https://i.postimg.cc/tT9pk29g/Samsung-The-Serif-LS01-B.jpg"
+              data-screensize="43"
+              data-resolution="4K UHD"
+              data-technology="QLED"
+              data-smart-tv="true"
+              data-refresh-rate="60"
+            >
+              <a
+                href="product-detail.html?id=samsung-the-serif-ls01b"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/tT9pk29g/Samsung-The-Serif-LS01-B.jpg"
+                    alt="Samsung The Serif LS01B"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Samsung The Serif LS01B</div>
+              <div class="product-price">
+                95000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="samsung-the-serif-ls01b"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="samsung-the-serif-ls01b"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="lg-oled-a2-48"
+              data-price="110000"
+              data-brand="LG"
+              data-name="LG OLED A2 48"
+              data-image="https://i.postimg.cc/9FQzCF5f/LG-OLED-A2-48.jpg"
+              data-screensize="48"
+              data-resolution="4K UHD"
+              data-technology="OLED"
+              data-smart-tv="true"
+              data-refresh-rate="60"
+            >
+              <a
+                href="product-detail.html?id=lg-oled-a2-48"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/9FQzCF5f/LG-OLED-A2-48.jpg"
+                    alt="LG OLED A2 48"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">LG OLED A2 48</div>
+              <div class="product-price">
+                110000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="lg-oled-a2-48"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="lg-oled-a2-48"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="tcl-p635-43"
+              data-price="32000"
+              data-brand="TCL"
+              data-name="TCL P635 43"
+              data-image="https://i.postimg.cc/R0LzWKwx/TCL-P635-43.jpg"
+              data-screensize="43"
+              data-resolution="4K UHD"
+              data-technology="LED"
+              data-smart-tv="true"
+              data-refresh-rate="60"
+            >
+              <a href="product-detail.html?id=tcl-p635-43" class="product-link">
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/R0LzWKwx/TCL-P635-43.jpg"
+                    alt="TCL P635 43"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">TCL P635 43</div>
+              <div class="product-price">
+                32000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="tcl-p635-43"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="tcl-p635-43"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="samsung-t5300-32"
+              data-price="22000"
+              data-brand="Samsung"
+              data-name="Samsung T5300"
+              data-image="https://i.postimg.cc/Dzk2J7DL/Samsung-T5300.png"
+              data-screensize="32"
+              data-resolution="Full HD"
+              data-technology="LED"
+              data-smart-tv="false"
+              data-refresh-rate="60"
+            >
+              <a
+                href="product-detail.html?id=samsung-t5300-32"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/Dzk2J7DL/Samsung-T5300.png"
+                    alt="Samsung T5300"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Samsung T5300</div>
+              <div class="product-price">
+                22000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="samsung-t5300-32"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="samsung-t5300-32"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="hisense-a4h-32"
+              data-price="20000"
+              data-brand="Hisense"
+              data-name="Hisense A4H"
+              data-image="https://i.postimg.cc/Bnt8cZMz/Hisense-A4-H.jpg"
+              data-screensize="32"
+              data-resolution="HD Ready"
+              data-technology="LED"
+              data-smart-tv="false"
+              data-refresh-rate="60"
+            >
+              <a
+                href="product-detail.html?id=hisense-a4h-32"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/Bnt8cZMz/Hisense-A4-H.jpg"
+                    alt="Hisense A4H"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Hisense A4H</div>
+              <div class="product-price">
+                20000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="hisense-a4h-32"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="hisense-a4h-32"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="erisson-19"
+              data-price="12000"
+              data-brand="Erisson"
+              data-name="Erisson 19"
+              data-image="https://i.postimg.cc/Sx5nZ0Px/Erisson-19.jpg"
+              data-screensize="19"
+              data-resolution="HD Ready"
+              data-technology="LED"
+              data-smart-tv="false"
+              data-refresh-rate="60"
+            >
+              <a href="product-detail.html?id=erisson-19" class="product-link">
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/Sx5nZ0Px/Erisson-19.jpg"
+                    alt="Erisson 19"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Erisson 19</div>
+              <div class="product-price">
+                12000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="erisson-19"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="erisson-19"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="thomson-32"
+              data-price="25000"
+              data-brand="Thomson"
+              data-name="Thomson 32"
+              data-image="https://i.postimg.cc/1zQQRJnK/Thomson-32.jpg"
+              data-screensize="32"
+              data-resolution="Full HD"
+              data-technology="LED"
+              data-smart-tv="false"
+              data-refresh-rate="60"
+            >
+              <a href="product-detail.html?id=thomson-32" class="product-link">
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/1zQQRJnK/Thomson-32.jpg"
+                    alt="Thomson 32"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Thomson 32</div>
+              <div class="product-price">
+                25000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="thomson-32"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="thomson-32"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="lg-oled-c2-42"
+              data-price="105000"
+              data-brand="LG"
+              data-name="LG OLED C2 42"
+              data-image="https://i.postimg.cc/W1D3qW4L/LG-OLED-C2-42.jpg"
+              data-screensize="42"
+              data-resolution="4K UHD"
+              data-technology="OLED"
+              data-smart-tv="true"
+              data-refresh-rate="120"
+            >
+              <a
+                href="product-detail.html?id=lg-oled-c2-42"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/W1D3qW4L/LG-OLED-C2-42.jpg"
+                    alt="LG OLED C2 42"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">LG OLED C2 42</div>
+              <div class="product-price">
+                105000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="lg-oled-c2-42"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="lg-oled-c2-42"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="sony-bravia-a90k-48"
+              data-price="135000"
+              data-brand="Sony"
+              data-name="Sony Bravia A90K 48"
+              data-image="https://i.postimg.cc/zvcNJNKL/Sony-Bravia-A90-K-48.jpg"
+              data-screensize="48"
+              data-resolution="4K UHD"
+              data-technology="OLED"
+              data-smart-tv="true"
+              data-refresh-rate="120"
+            >
+              <a
+                href="product-detail.html?id=sony-bravia-a90k-48"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/zvcNJNKL/Sony-Bravia-A90-K-48.jpg"
+                    alt="Sony Bravia A90K 48"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Sony Bravia A90K 48</div>
+              <div class="product-price">
+                135000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="sony-bravia-a90k-48"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="sony-bravia-a90k-48"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="hisense-a7g-50"
+              data-price="55000"
+              data-brand="Hisense"
+              data-name="Hisense A7G 50"
+              data-image="https://i.postimg.cc/G2P9h4m4/Hisense-A7-G-50.png"
+              data-screensize="50"
+              data-resolution="4K UHD"
+              data-technology="LED"
+              data-smart-tv="true"
+              data-refresh-rate="60"
+            >
+              <a
+                href="product-detail.html?id=hisense-a7g-50"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/G2P9h4m4/Hisense-A7-G-50.png"
+                    alt="Hisense A7G 50"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Hisense A7G 50</div>
+              <div class="product-price">
+                55000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="hisense-a7g-50"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="hisense-a7g-50"
+                ></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-pagination">
+            <div class="product-pagination-links">
+              <a href="#" class="product-pagination-link active" data-page="1"
+                >1</a
+              >
+              <a href="#" class="product-pagination-link" data-page="2">2</a>
+              <a href="#" class="product-pagination-link" data-page="3">3</a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="icons bottom-icons">
+      <a href="../index.html" class="main-page-link-js">
+        <i class="fas fa-home"></i> <span>Главное</span>
+      </a>
+      <a href="favorite.html" class="fav-link">
+        <i class="fas fa-heart"></i>
+        <span>Избранное</span>
+        <span class="fav-counter">0</span>
+      </a>
+      <a href="cart.html" class="cart-link">
+        <i class="fas fa-shopping-cart"></i>
+        <span>Корзина</span>
+        <span class="cart-counter">0</span>
+      </a>
+      <a class="open-login-modal-btn-mob">
+        <i class="fas fa-user"></i> <span>Войти</span>
+      </a>
+    </div>
+
+    <footer>
+      <div class="mobile-footer-buttons">
+        <div class="mobile-footer-button company-button">
+          Компания <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="company-dropdown">
+          <a href="company.html">О компании</a>
+          <a href="privacy_policy.html">Политика конфиденциальности</a>
+          <a href="sell_rules.html">Правила продаж</a>
+          <a href="personal_data.html">Персональные данные</a>
+        </div>
+        <div class="mobile-footer-button buyers-button">
+          Покупателям <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="buyers-dropdown">
+          <a href="how_order.html">Как оформить заказ</a>
+          <a href="payment_ways.html">Способы оплаты</a>
+          <a href="delivery.html">Доставка</a>
+          <a href="exchange_return_warranty.html">Обмен, возврат, гарантия</a>
+        </div>
+      </div>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>Компания</h3>
+          <ul>
+            <li>
+              <a href="company.html">О компании</a>
+            </li>
+            <li>
+              <a href="privacy_policy.html">Политика конфиденциальности</a>
+            </li>
+            <li>
+              <a href="sell_rules.html">Правила продаж</a>
+            </li>
+            <li>
+              <a href="personal_data.html">Персональные данные</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Покупателям</h3>
+          <ul>
+            <li>
+              <a href="how_order.html">Как оформить заказ</a>
+            </li>
+            <li>
+              <a href="payment_ways.html">Способы оплаты</a>
+            </li>
+            <li>
+              <a href="delivery.html">Доставка</a>
+            </li>
+            <li>
+              <a href="exchange_return_warranty.html"
+                >Обмен, возврат, гарантия</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column connect-us">
+          <h3>Оставайтесь на связи</h3>
+          <div class="social-icons">
+            <a href="https://example.com"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://example.com"><i class="fab fa-instagram"></i></a>
+            <a href="https://example.com"><i class="fab fa-vk"></i></a>
+          </div>
+          <ul>
+            <li>
+              <a href="adress.html">Адреса магазинов Бишкек</a>
+            </li>
+            <li>
+              <a href="feedback.html">Обратная связь</a>
+            </li>
+            <li>
+              <a href="service_center.html">Сервисный центр</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          2023-2025 © Компания. Администрация Сайта не несет ответственности за
+          размещаемые Пользователями материалы (в т.ч. информацию и
+          изображения), их содержание и качество.
+        </p>
+      </div>
+    </footer>
+
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Вход или регистрация</h2>
+        <form>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Введите ваш Email"
+              autocomplete="off"
+            />
+          </div>
+          <div class="input-group password-input-container">
+            <label for="password">Пароль</label>
+            <div class="password-field-wrapper">
+              <input
+                type="password"
+                id="password"
+                placeholder="Введите пароль"
+                autocomplete="new-password"
+              />
+              <button type="button" class="toggle-password-visibility">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <p
+            id="passwordError"
+            style="
+              color: red;
+              font-size: 12px;
+              margin-top: -15px;
+              margin-bottom: 20px;
+              display: none;
+            "
+          ></p>
+
+          <button type="submit" class="login-button">Войти</button>
+        </form>
+        <p class="privacy-text">
+          Нажимая кнопку "Войти", Вы соглашаетесь с условиями
+          <a href="#">политики конфиденциальности</a>
+        </p>
+      </div>
+    </div>
+
+    <script type="module" src="../scripts/scripts.js"></script>
+    <script src="../scripts/product-listing.js"></script>
+  </body>
+</html>

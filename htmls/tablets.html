@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Планшеты</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="icon" type="image/png" href="../images/logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="top-header">
+      <div class="header-row top-line">
+        <div class="location">
+          <span><i class="fas fa-location-dot"></i> Бишкек</span>
+          <button id="theme-toggle" class="theme-toggle-button">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+        <div class="contacts"></div>
+        <div class="contacts">
+          <a
+            href="https://example.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span><i class="fab fa-instagram insta-icon"></i></span>
+          </a>
+          <a
+            href="https://example.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span><i class="fab fa-whatsapp insta-icon"></i></span>
+          </a>
+          <a href="tel:+996550556612">+996 550-556-612</a>
+          <span><i class="fas fa-map"></i></span>
+          <a href="adress.html">Магазины</a>
+          <a href="vacancies.html">Вакансии</a>
+        </div>
+      </div>
+
+      <div class="header-row middle-line">
+        <a href="../index.html" class="logo desktop-logo">
+          <img src="../images/logo.png" alt="DNS Logo" height="40" />
+        </a>
+        <div class="header-search-container">
+          <div class="search-bar">
+            <span class="icon-desktop"><i class="fas fa-bars"></i></span>
+            <span class="icon-mobile"
+              ><i class="fas fa-magnifying-glass"></i
+            ></span>
+
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Поиск по сайту"
+              autocomplete="off"
+            />
+            <span
+              id="clear-search"
+              class="clear-search-icon"
+              style="display: none"
+              >&times;</span
+            >
+          </div>
+          <section class="search-results-container">
+            <div id="product-results-grid"></div>
+          </section>
+        </div>
+
+        <div class="icons upper-icons">
+          <div class="icon-container">
+            <a href="favorite.html" class="fav-link">
+              <i class="far fa-heart fav-icon fas"></i>
+              <span>Избранное</span>
+            </a>
+            <span class="fav-counter">0</span>
+          </div>
+          <div class="icon-container">
+            <a href="cart.html" class="cart-link">
+              <i class="fas fa-shopping-cart cart-icon"></i>
+              <span>Корзина</span>
+            </a>
+            <span class="cart-counter">0</span>
+          </div>
+          <a href="#" class="open-login-modal-btn">
+            <i class="fas fa-user"></i>
+            <span>Войти</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="header-row bottom-bar nav-categories">
+        <a href="phones.html">Смартфоны</a>
+        <a href="tv.html">Телевизоры</a>
+        <a href="laptop.html">Ноутбуки</a>
+        <a href="tablets.html">Планшеты</a>
+      </div>
+    </div>
+
+    <div class="catalog-content-wrapper">
+      <h1 class="cat-page-title cat-page-title-mobile">
+        Мобильные телефоны в Кыргызстане
+      </h1>
+      <aside class="filters-sidebar">
+        <h2>Фильтры</h2>
+        <div class="filter-group">
+          <div class="filter-header active">
+            <span><i class="fas fa-chevron-down"></i> Цена</span>
+          </div>
+          <div class="filter-content price-filter active">
+            <div class="price-inputs">
+              <div class="price-input-wrapper">
+                <input
+                  type="text"
+                  placeholder="от 10 000"
+                  value=""
+                  class="price-min"
+                  data-min-value="10000"
+                  data-max-value="180000"
+                  maxlength="10"
+                />
+                <span class="clear-input-btn"
+                  ><i class="fas fa-times-circle"></i
+                ></span>
+              </div>
+              <div class="price-input-wrapper">
+                <input
+                  type="text"
+                  placeholder="до 180 000"
+                  value=""
+                  class="price-max"
+                  data-min-value="10000"
+                  data-max-value="180000"
+                  maxlength="10"
+                />
+                <span class="clear-input-btn"
+                  ><i class="fas fa-times-circle"></i
+                ></span>
+              </div>
+            </div>
+            <label class="filter-checkbox">
+              <input
+                type="checkbox"
+                name="price_range_checkbox"
+                data-min="0"
+                data-max="20000"
+              />
+              <span class="checkbox-custom"></span> Менее 20 000 сом
+            </label>
+            <label class="filter-checkbox">
+              <input
+                type="checkbox"
+                name="price_range_checkbox"
+                data-min="20001"
+                data-max="50000"
+              />
+              <span class="checkbox-custom"></span> 20 001 - 50 000 сом
+            </label>
+            <label class="filter-checkbox">
+              <input
+                type="checkbox"
+                name="price_range_checkbox"
+                data-min="50001"
+                data-max="100000"
+              />
+              <span class="checkbox-custom"></span> 50 001 - 100 000 сом
+            </label>
+            <label class="filter-checkbox">
+              <input
+                type="checkbox"
+                name="price_range_checkbox"
+                data-min="100001"
+                data-max="9999999"
+              />
+              <span class="checkbox-custom"></span> 100 001 сом и более
+            </label>
+            <button class="filter-reset-btn">Сбросить</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-header">
+            <span><i class="fas fa-chevron-down"></i> Бренд</span>
+          </div>
+          <div class="filter-content brand-filter">
+            <label class="filter-checkbox">
+              <input type="checkbox" name="brand" value="Apple" />
+              <span class="checkbox-custom"></span> Apple
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="brand" value="Samsung" />
+              <span class="checkbox-custom"></span> Samsung
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="brand" value="Xiaomi" />
+              <span class="checkbox-custom"></span> Xiaomi
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="brand" value="Huawei" />
+              <span class="checkbox-custom"></span> Huawei
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="brand" value="Lenovo" />
+              <span class="checkbox-custom"></span> Lenovo
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="brand" value="Honor" />
+              <span class="checkbox-custom"></span> Honor
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="brand" value="Realme" />
+              <span class="checkbox-custom"></span> Realme
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="brand" value="OnePlus" />
+              <span class="checkbox-custom"></span> OnePlus
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="brand" value="Pixel" />
+              <span class="checkbox-custom"></span> Pixel
+            </label>
+            <button class="filter-reset-btn">Сбросить</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-header">
+            <span
+              ><i class="fas fa-chevron-down"></i> Объем встроенной памяти
+              (ГБ)</span
+            >
+          </div>
+          <div class="filter-content storage-filter">
+            <label class="filter-checkbox">
+              <input type="checkbox" name="memory" value="32" />
+              <span class="checkbox-custom"></span> 32 ГБ
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="memory" value="64" />
+              <span class="checkbox-custom"></span> 64 ГБ
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="memory" value="128" />
+              <span class="checkbox-custom"></span> 128 ГБ
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="memory" value="256" />
+              <span class="checkbox-custom"></span> 256 ГБ
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="memory" value="512" />
+              <span class="checkbox-custom"></span> 512 ГБ
+            </label>
+            <button class="filter-reset-btn">Сбросить</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-header">
+            <span><i class="fas fa-chevron-down"></i> Количество камер</span>
+          </div>
+          <div class="filter-content camera-count-filter">
+            <label class="filter-checkbox">
+              <input type="checkbox" name="camera-count" value="1" />
+              <span class="checkbox-custom"></span> 1 камера
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="camera-count" value="2" />
+              <span class="checkbox-custom"></span> 2 камеры
+            </label>
+            <button class="filter-reset-btn">Сбросить</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-header">
+            <span
+              ><i class="fas fa-chevron-down"></i> Основная камера (Мп)</span
+            >
+          </div>
+          <div class="filter-content camera-mp-filter">
+            <label class="filter-checkbox">
+              <input type="checkbox" name="camera-mp" value="0-8" />
+              <span class="checkbox-custom"></span> До 8 Мп
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="camera-mp" value="9-13" />
+              <span class="checkbox-custom"></span> 9-13 Мп
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="camera-mp" value="14-20" />
+              <span class="checkbox-custom"></span> 14-20 Мп
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="camera-mp" value="21-999" />
+              <span class="checkbox-custom"></span> 21 Мп и более
+            </label>
+            <button class="filter-reset-btn">Сбросить</button>
+          </div>
+        </div>
+
+        <button class="show-results-btn">Показать</button>
+      </aside>
+
+      <main class="cat-main-container product-catalog-main-content">
+        <section class="product-catalog-section">
+          <h1 class="cat-page-title cat-page-title-desktop">
+            Планшеты в Кыргызстане
+          </h1>
+
+          <div class="product-grid active" id="page-1">
+            <!-- Samsung Galaxy Tab S9 FE - Пример, который уже был -->
+            <div
+              class="product-card"
+              data-id="samsung-galaxy-tab-s9-fe"
+              data-price="35000"
+              data-brand="Samsung"
+              data-memory="128"
+              data-name="Samsung Galaxy Tab S9 FE"
+              data-image="https://i.postimg.cc/HsLmBQns/samsung-galaxy-tab-s9-fe.png"
+              data-camera="8MP"
+              data-megapixels="8"
+              data-camera-count="1"
+            >
+              <a
+                href="product-detail.html?id=samsung-galaxy-tab-s9-fe"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/HsLmBQns/samsung-galaxy-tab-s9-fe.png"
+                    alt="Samsung Galaxy Tab S9 FE"
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Samsung Galaxy Tab S9 FE</div>
+              <div class="product-price">
+                35000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="samsung-galaxy-tab-s9-fe"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="samsung-galaxy-tab-s9-fe"
+                ></i>
+              </div>
+            </div>
+
+            <!-- 1. Apple iPad Air 5 -->
+            <div
+              class="product-card"
+              data-id="apple-ipad-air-5"
+              data-price="65000"
+              data-brand="Apple"
+              data-memory="256"
+              data-name="Apple iPad Air 5"
+              data-image="https://i.postimg.cc/tJxMMCKk/apple-ipad-air-5.png"
+              data-camera="12MP"
+              data-megapixels="12"
+              data-camera-count="1"
+            >
+              <a
+                href="product-detail.html?id=apple-ipad-air-5"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/tJxMMCKk/apple-ipad-air-5.png"
+                    alt="Apple iPad Air 5"
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Apple iPad Air 5</div>
+              <div class="product-price">
+                65000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="apple-ipad-air-5"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="apple-ipad-air-5"
+                ></i>
+              </div>
+            </div>
+
+            <!-- 2. Xiaomi Pad 6 -->
+            <div
+              class="product-card"
+              data-id="xiaomi-pad-6"
+              data-price="28000"
+              data-brand="Xiaomi"
+              data-memory="128"
+              data-name="Xiaomi Pad 6"
+              data-image="https://i.postimg.cc/1XwvK7FY/xiaomi-pad-6.png"
+              data-camera="13MP"
+              data-megapixels="13"
+              data-camera-count="1"
+            >
+              <a
+                href="product-detail.html?id=xiaomi-pad-6"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/1XwvK7FY/xiaomi-pad-6.png"
+                    alt="Xiaomi Pad 6"
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Xiaomi Pad 6</div>
+              <div class="product-price">
+                28000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="xiaomi-pad-6"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="xiaomi-pad-6"
+                ></i>
+              </div>
+            </div>
+
+            <!-- 3. Huawei MatePad Pro 11 -->
+            <div
+              class="product-card"
+              data-id="huawei-matepad-pro-11"
+              data-price="42000"
+              data-brand="Huawei"
+              data-memory="256"
+              data-name="Huawei MatePad Pro 11"
+              data-image="https://i.postimg.cc/c1pj8w3b/huawei-matepad-pro-11.png"
+              data-camera="13MP"
+              data-megapixels="13"
+              data-camera-count="1"
+            >
+              <a
+                href="product-detail.html?id=huawei-matepad-pro-11"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/c1pj8w3b/huawei-matepad-pro-11.png"
+                    alt="Huawei MatePad Pro 11"
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Huawei MatePad Pro 11</div>
+              <div class="product-price">
+                42000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="huawei-matepad-pro-11"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="huawei-matepad-pro-11"
+                ></i>
+              </div>
+            </div>
+
+            <!-- 5. Samsung Galaxy Tab A8 -->
+            <div
+              class="product-card"
+              data-id="samsung-galaxy-tab-a8"
+              data-price="18000"
+              data-brand="Samsung"
+              data-memory="64"
+              data-name="Samsung Galaxy Tab A8"
+              data-image="https://i.postimg.cc/rmdnDwwT/samsung-galaxy-tab-a8.png"
+              data-camera="8MP"
+              data-megapixels="8"
+              data-camera-count="1"
+            >
+              <a
+                href="product-detail.html?id=samsung-galaxy-tab-a8"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/rmdnDwwT/samsung-galaxy-tab-a8.png"
+                    alt="Samsung Galaxy Tab A8"
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Samsung Galaxy Tab A8</div>
+              <div class="product-price">
+                18000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="samsung-galaxy-tab-a8"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="samsung-galaxy-tab-a8"
+                ></i>
+              </div>
+            </div>
+
+            <!-- 6. Apple iPad 10th Gen -->
+            <div
+              class="product-card"
+              data-id="apple-ipad-10th-gen"
+              data-price="55000"
+              data-brand="Apple"
+              data-memory="64"
+              data-name="Apple iPad 10th Gen"
+              data-image="https://i.postimg.cc/ZYwnbYyn/apple-ipad-10th.png"
+              data-camera="12MP"
+              data-megapixels="12"
+              data-camera-count="1"
+            >
+              <a
+                href="product-detail.html?id=apple-ipad-10th-gen"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/ZYwnbYyn/apple-ipad-10th.png"
+                    alt="Apple iPad 10th Gen"
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Apple iPad 10th Gen</div>
+              <div class="product-price">
+                55000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="apple-ipad-10th-gen"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="apple-ipad-10th-gen"
+                ></i>
+              </div>
+            </div>
+
+            <!-- 7. Xiaomi Redmi Pad SE -->
+            <div
+              class="product-card"
+              data-id="xiaomi-redmi-pad-se"
+              data-price="15000"
+              data-brand="Xiaomi"
+              data-memory="128"
+              data-name="Xiaomi Redmi Pad SE"
+              data-image="https://i.postimg.cc/fL6HmQV9/xiaomi-redmi-pad-se.png"
+              data-camera="8MP"
+              data-megapixels="8"
+              data-camera-count="1"
+            >
+              <a
+                href="product-detail.html?id=xiaomi-redmi-pad-se"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/fL6HmQV9/xiaomi-redmi-pad-se.png"
+                    alt="Xiaomi Redmi Pad SE"
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Xiaomi Redmi Pad SE</div>
+              <div class="product-price">
+                15000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="xiaomi-redmi-pad-se"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="xiaomi-redmi-pad-se"
+                ></i>
+              </div>
+            </div>
+
+            <!-- 8. Honor Pad X9 -->
+            <div
+              class="product-card"
+              data-id="honor-pad-x9"
+              data-price="22000"
+              data-brand="Honor"
+              data-memory="128"
+              data-name="Honor Pad X9"
+              data-image="https://i.postimg.cc/J7DvnPsX/Honor-Pad-X9.png"
+              data-camera="5MP"
+              data-megapixels="5"
+              data-camera-count="1"
+            >
+              <a
+                href="product-detail.html?id=honor-pad-x9"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/J7DvnPsX/Honor-Pad-X9.png"
+                    alt="Honor Pad X9"
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Honor Pad X9</div>
+              <div class="product-price">
+                22000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="honor-pad-x9"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="honor-pad-x9"
+                ></i>
+              </div>
+            </div>
+
+            <!-- 9. Realme Pad 2 -->
+            <div
+              class="product-card"
+              data-id="realme-pad-2"
+              data-price="20000"
+              data-brand="Realme"
+              data-memory="64"
+              data-name="Realme Pad 2"
+              data-image="https://i.postimg.cc/3xBb6qcs/realme-pad-2.png"
+              data-camera="8MP"
+              data-megapixels="8"
+              data-camera-count="1"
+            >
+              <a
+                href="product-detail.html?id=realme-pad-2"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/3xBb6qcs/realme-pad-2.png"
+                    alt="Realme Pad 2"
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Realme Pad 2</div>
+              <div class="product-price">
+                20000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="realme-pad-2"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="realme-pad-2"
+                ></i>
+              </div>
+            </div>
+
+            <!-- 10. OnePlus Pad -->
+            <div
+              class="product-card"
+              data-id="oneplus-pad"
+              data-price="50000"
+              data-brand="OnePlus"
+              data-memory="256"
+              data-name="OnePlus Pad"
+              data-image="https://i.postimg.cc/xd1FSRrc/oneplus-pad.png"
+              data-camera="13MP"
+              data-megapixels="13"
+              data-camera-count="1"
+            >
+              <a href="product-detail.html?id=oneplus-pad" class="product-link">
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/xd1FSRrc/oneplus-pad.png"
+                    alt="OnePlus Pad"
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">OnePlus Pad</div>
+              <div class="product-price">
+                50000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="oneplus-pad"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="oneplus-pad"
+                ></i>
+              </div>
+            </div>
+
+            <!-- 11. Google Pixel Tablet -->
+            <div
+              class="product-card"
+              data-id="google-pixel-tablet"
+              data-price="45000"
+              data-brand="Pixel"
+              data-memory="128"
+              data-name="Google Pixel Tablet"
+              data-image="https://i.postimg.cc/9FykP0tF/Google-Pixel-Tablet.png"
+              data-camera="8MP"
+              data-megapixels="8"
+              data-camera-count="1"
+            >
+              <a
+                href="product-detail.html?id=google-pixel-tablet"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/9FykP0tF/Google-Pixel-Tablet.png"
+                    alt="Google Pixel Tablet"
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Google Pixel Tablet</div>
+              <div class="product-price">
+                45000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="google-pixel-tablet"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="google-pixel-tablet"
+                ></i>
+              </div>
+            </div>
+            <!-- 12. Apple iPad Pro 12.9 (M2) -->
+            <div
+              class="product-card"
+              data-id="apple-ipad-pro-12-9-m2"
+              data-price="120000"
+              data-brand="Apple"
+              data-memory="256"
+              data-name="Apple iPad Pro 12.9 (M2)"
+              data-image="https://i.postimg.cc/FKT8f6by/Apple-i-Pad-Pro-12-9-M2.png"
+              data-camera="12MP"
+              data-megapixels="12"
+              data-camera-count="2"
+            >
+              <a
+                href="product-detail.html?id=apple-ipad-pro-12-9-m2"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/FKT8f6by/Apple-i-Pad-Pro-12-9-M2.png"
+                    alt="Apple iPad Pro 12.9 (M2)"
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Apple iPad Pro 12.9 (M2)</div>
+              <div class="product-price">
+                120000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="apple-ipad-pro-12-9-m2"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="apple-ipad-pro-12-9-m2"
+                ></i>
+              </div>
+            </div>
+
+            <!-- 13. Apple iPad Air 4 -->
+            <div
+              class="product-card"
+              data-id="apple-ipad-air-4"
+              data-price="50000"
+              data-brand="Apple"
+              data-memory="64"
+              data-name="Apple iPad Air 4"
+              data-image="https://i.postimg.cc/B6yzp1Vt/apple-ipad-air-4.png"
+              data-camera="12MP"
+              data-megapixels="12"
+              data-camera-count="1"
+            >
+              <a
+                href="product-detail.html?id=apple-ipad-air-4"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/B6yzp1Vt/apple-ipad-air-4.png"
+                    alt="Apple iPad Air 4"
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Apple iPad Air 4</div>
+              <div class="product-price">
+                50000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="apple-ipad-air-4"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="apple-ipad-air-4"
+                ></i>
+              </div>
+            </div>
+
+            <!-- 14. Apple iPad mini 6 -->
+            <div
+              class="product-card"
+              data-id="apple-ipad-mini-6"
+              data-price="58000"
+              data-brand="Apple"
+              data-memory="64"
+              data-name="Apple iPad mini 6"
+              data-image="https://i.postimg.cc/VNf2kwts/Apple-i-Pad-mini-6.png"
+              data-camera="12MP"
+              data-megapixels="12"
+              data-camera-count="1"
+            >
+              <a
+                href="product-detail.html?id=apple-ipad-mini-6"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/VNf2kwts/Apple-i-Pad-mini-6.png"
+                    alt="Apple iPad mini 6"
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Apple iPad mini 6</div>
+              <div class="product-price">
+                58000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="apple-ipad-mini-6"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="apple-ipad-mini-6"
+                ></i>
+              </div>
+            </div>
+
+            <!-- 15. Apple iPad 9th Gen -->
+            <div
+              class="product-card"
+              data-id="apple-ipad-9th-gen"
+              data-price="40000"
+              data-brand="Apple"
+              data-memory="64"
+              data-name="Apple iPad 9th Gen"
+              data-image="https://i.postimg.cc/htbHnvf3/apple-ipad-9th.png"
+              data-camera="8MP"
+              data-megapixels="8"
+              data-camera-count="1"
+            >
+              <a
+                href="product-detail.html?id=apple-ipad-9th-gen"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/htbHnvf3/apple-ipad-9th.png"
+                    alt="Apple iPad 9th Gen"
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Apple iPad 9th Gen</div>
+              <div class="product-price">
+                40000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="apple-ipad-9th-gen"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="apple-ipad-9th-gen"
+                ></i>
+              </div>
+            </div>
+
+            <!-- 16. Apple iPad Pro 11 (M4) -->
+            <div
+              class="product-card"
+              data-id="apple-ipad-pro-11-m4"
+              data-price="105000"
+              data-brand="Apple"
+              data-memory="256"
+              data-name="Apple iPad Pro 11 (M4)"
+              data-image="https://i.postimg.cc/mgG0KC2H/Apple-i-Pad-Pro-11-M4.png"
+              data-camera="12MP"
+              data-megapixels="12"
+              data-camera-count="2"
+            >
+              <a
+                href="product-detail.html?id=apple-ipad-pro-11-m4"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/mgG0KC2H/Apple-i-Pad-Pro-11-M4.png"
+                    alt="Apple iPad Pro 11 (M4)"
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Apple iPad Pro 11 (M4)</div>
+              <div class="product-price">
+                105000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="apple-ipad-pro-11-m4"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="apple-ipad-pro-11-m4"
+                ></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-pagination">
+            <div class="product-pagination-links">
+              <a href="#" class="product-pagination-link active" data-page="1"
+                >1</a
+              >
+              <a href="#" class="product-pagination-link" data-page="2">2</a>
+              <a href="#" class="product-pagination-link" data-page="3">3</a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="icons bottom-icons">
+      <a href="../index.html" class="main-page-link-js">
+        <i class="fas fa-home"></i> <span>Главное</span>
+      </a>
+      <a href="favorite.html" class="fav-link">
+        <i class="fas fa-heart"></i>
+        <span>Избранное</span>
+        <span class="fav-counter">0</span>
+      </a>
+      <a href="cart.html" class="cart-link">
+        <i class="fas fa-shopping-cart"></i>
+        <span>Корзина</span>
+        <span class="cart-counter">0</span>
+      </a>
+      <a class="open-login-modal-btn-mob">
+        <i class="fas fa-user"></i> <span>Войти</span>
+      </a>
+    </div>
+
+    <footer>
+      <div class="mobile-footer-buttons">
+        <div class="mobile-footer-button company-button">
+          Компания <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="company-dropdown">
+          <a href="company.html">О компании</a>
+          <a href="privacy_policy.html">Политика конфиденциальности</a>
+          <a href="sell_rules.html">Правила продаж</a>
+          <a href="personal_data.html">Персональные данные</a>
+        </div>
+        <div class="mobile-footer-button buyers-button">
+          Покупателям <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="buyers-dropdown">
+          <a href="how_order.html">Как оформить заказ</a>
+          <a href="payment_ways.html">Способы оплаты</a>
+          <a href="delivery.html">Доставка</a>
+          <a href="exchange_return_warranty.html">Обмен, возврат, гарантия</a>
+        </div>
+      </div>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>Компания</h3>
+          <ul>
+            <li>
+              <a href="company.html">О компании</a>
+            </li>
+            <li>
+              <a href="privacy_policy.html">Политика конфиденциальности</a>
+            </li>
+            <li>
+              <a href="sell_rules.html">Правила продаж</a>
+            </li>
+            <li>
+              <a href="personal_data.html">Персональные данные</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Покупателям</h3>
+          <ul>
+            <li>
+              <a href="how_order.html">Как оформить заказ</a>
+            </li>
+            <li>
+              <a href="payment_ways.html">Способы оплаты</a>
+            </li>
+            <li>
+              <a href="delivery.html">Доставка</a>
+            </li>
+            <li>
+              <a href="exchange_return_warranty.html"
+                >Обмен, возврат, гарантия</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column connect-us">
+          <h3>Оставайтесь на связи</h3>
+          <div class="social-icons">
+            <a href="https://example.com"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://example.com"><i class="fab fa-instagram"></i></a>
+            <a href="https://example.com"><i class="fab fa-vk"></i></a>
+          </div>
+          <ul>
+            <li>
+              <a href="adress.html">Адреса магазинов Бишкек</a>
+            </li>
+            <li>
+              <a href="feedback.html">Обратная связь</a>
+            </li>
+            <li>
+              <a href="service_center.html">Сервисный центр</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          2023-2025 © Компания. Администрация Сайта не несет ответственности за
+          размещаемые Пользователями материалы (в т.ч. информацию и
+          изображения), их содержание и качество.
+        </p>
+      </div>
+    </footer>
+
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Вход или регистрация</h2>
+        <form>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Введите ваш Email"
+              autocomplete="off"
+            />
+          </div>
+          <div class="input-group password-input-container">
+            <label for="password">Пароль</label>
+            <div class="password-field-wrapper">
+              <input
+                type="password"
+                id="password"
+                placeholder="Введите пароль"
+                autocomplete="new-password"
+              />
+              <button type="button" class="toggle-password-visibility">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <p
+            id="passwordError"
+            style="
+              color: red;
+              font-size: 12px;
+              margin-top: -15px;
+              margin-bottom: 20px;
+              display: none;
+            "
+          ></p>
+
+          <button type="submit" class="login-button">Войти</button>
+        </form>
+        <p class="privacy-text">
+          Нажимая кнопку "Войти", Вы соглашаетесь с условиями
+          <a href="#">политики конфиденциальности</a>
+        </p>
+      </div>
+    </div>
+
+    <script type="module" src="../scripts/scripts.js"></script>
+    <script src="../scripts/product-listing.js"></script>
+  </body>
+</html>

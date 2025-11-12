@@ -1,0 +1,2081 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Телефоны</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="icon" type="image/png" href="../images/logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="top-header">
+      <div class="header-row top-line">
+        <div class="location">
+          <span><i class="fas fa-location-dot"></i> Бишкек</span>
+          <button id="theme-toggle" class="theme-toggle-button">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+        <div class="contacts"></div>
+        <div class="contacts">
+          <a
+            href="https://example.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span><i class="fab fa-instagram insta-icon"></i></span>
+          </a>
+          <a
+            href="https://example.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span><i class="fab fa-whatsapp insta-icon"></i></span>
+          </a>
+          <a href="tel:+996550556612">+996 550-556-612</a>
+          <span><i class="fas fa-map"></i></span>
+          <a href="adress.html">Магазины</a>
+          <a href="vacancies.html">Вакансии</a>
+        </div>
+      </div>
+
+      <div class="header-row middle-line">
+        <a href="../index.html" class="logo desktop-logo">
+          <img src="../images/logo.png" alt="DNS Logo" height="40" />
+        </a>
+        <div class="header-search-container">
+          <div class="search-bar">
+            <span class="icon-desktop"><i class="fas fa-bars"></i></span>
+            <span class="icon-mobile"
+              ><i class="fas fa-magnifying-glass"></i
+            ></span>
+
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Поиск по сайту"
+              autocomplete="off"
+            />
+            <span
+              id="clear-search"
+              class="clear-search-icon"
+              style="display: none"
+              >&times;</span
+            >
+          </div>
+          <section class="search-results-container">
+            <div id="product-results-grid"></div>
+          </section>
+        </div>
+
+        <div class="icons upper-icons">
+          <div class="icon-container">
+            <a href="favorite.html" class="fav-link">
+              <i class="far fa-heart fav-icon fas"></i>
+              <span>Избранное</span>
+            </a>
+            <span class="fav-counter">0</span>
+          </div>
+          <div class="icon-container">
+            <a href="cart.html" class="cart-link">
+              <i class="fas fa-shopping-cart cart-icon"></i>
+              <span>Корзина</span>
+            </a>
+            <span class="cart-counter">0</span>
+          </div>
+          <a href="#" class="open-login-modal-btn">
+            <i class="fas fa-user"></i>
+            <span>Войти</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="header-row bottom-bar nav-categories">
+        <a href="phones.html">Смартфоны</a>
+        <a href="tv.html">Телевизоры</a>
+        <a href="laptop.html">Ноутбуки</a>
+        <a href="tablets.html">Планшеты</a>
+      </div>
+    </div>
+
+    <div class="catalog-content-wrapper">
+      <h1 class="cat-page-title cat-page-title-mobile">
+        Мобильные телефоны в Кыргызстане
+      </h1>
+      <aside class="filters-sidebar">
+        <h2>Фильтры</h2>
+        <div class="filter-group">
+          <div class="filter-header active">
+            <span><i class="fas fa-chevron-down"></i> Цена</span>
+          </div>
+          <div class="filter-content price-filter active">
+            <div class="price-inputs">
+              <div class="price-input-wrapper">
+                <input
+                  type="text"
+                  placeholder="от 4 295"
+                  value=""
+                  class="price-min"
+                  data-min-value="4295"
+                  data-max-value="180000"
+                  maxlength="10"
+                />
+                <span class="clear-input-btn"
+                  ><i class="fas fa-times-circle"></i
+                ></span>
+              </div>
+              <div class="price-input-wrapper">
+                <input
+                  type="text"
+                  placeholder="до 180 000"
+                  value=""
+                  class="price-max"
+                  data-min-value="4295"
+                  data-max-value="180000"
+                  maxlength="10"
+                />
+                <span class="clear-input-btn"
+                  ><i class="fas fa-times-circle"></i
+                ></span>
+              </div>
+            </div>
+            <label class="filter-checkbox">
+              <input
+                type="checkbox"
+                name="price_range_checkbox"
+                data-min="0"
+                data-max="9999"
+              />
+              <span class="checkbox-custom"></span> Менее 10 000 сом
+            </label>
+            <label class="filter-checkbox">
+              <input
+                type="checkbox"
+                name="price_range_checkbox"
+                data-min="10000"
+                data-max="30000"
+              />
+              <span class="checkbox-custom"></span> 10 000 - 30 000 сом
+            </label>
+            <label class="filter-checkbox">
+              <input
+                type="checkbox"
+                name="price_range_checkbox"
+                data-min="30001"
+                data-max="60000"
+              />
+              <span class="checkbox-custom"></span> 30 001 - 60 000 сом
+            </label>
+            <label class="filter-checkbox">
+              <input
+                type="checkbox"
+                name="price_range_checkbox"
+                data-min="60001"
+                data-max="100000"
+              />
+              <span class="checkbox-custom"></span> 60 001 - 100 000 сом
+            </label>
+            <label class="filter-checkbox">
+              <input
+                type="checkbox"
+                name="price_range_checkbox"
+                data-min="100001"
+                data-max="9999999"
+              />
+              <span class="checkbox-custom"></span> 100 001 сом и более
+            </label>
+            <button class="filter-reset-btn">Сбросить</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-header">
+            <span><i class="fas fa-chevron-down"></i> Бренд</span>
+          </div>
+          <div class="filter-content brand-filter">
+            <label class="filter-checkbox">
+              <input type="checkbox" name="brand" value="Infinix" />
+              <span class="checkbox-custom"></span> Infinix
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="brand" value="Honor" />
+              <span class="checkbox-custom"></span> Honor
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="brand" value="Xiaomi" />
+              <span class="checkbox-custom"></span> Xiaomi
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="brand" value="Apple" />
+              <span class="checkbox-custom"></span> Apple
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="brand" value="Pixel" />
+              <span class="checkbox-custom"></span> Pixel
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="brand" value="Samsung" />
+              <span class="checkbox-custom"></span> Samsung
+            </label>
+            <button class="filter-reset-btn">Сбросить</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-header">
+            <span
+              ><i class="fas fa-chevron-down"></i> Объем встроенной памяти
+              (ГБ)</span
+            >
+          </div>
+          <div class="filter-content storage-filter">
+            <label class="filter-checkbox">
+              <input type="checkbox" name="memory" value="32" />
+              <span class="checkbox-custom"></span> 32 ГБ
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="memory" value="64" />
+              <span class="checkbox-custom"></span> 64 ГБ
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="memory" value="128" />
+              <span class="checkbox-custom"></span> 128 ГБ
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="memory" value="256" />
+              <span class="checkbox-custom"></span> 256 ГБ
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="memory" value="512" />
+              <span class="checkbox-custom"></span> 512 ГБ
+            </label>
+            <button class="filter-reset-btn">Сбросить</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-header">
+            <span><i class="fas fa-chevron-down"></i> Количество камер</span>
+          </div>
+          <div class="filter-content camera-count-filter">
+            <label class="filter-checkbox">
+              <input type="checkbox" name="camera-count" value="1" />
+              <span class="checkbox-custom"></span> 1 камера
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="camera-count" value="2" />
+              <span class="checkbox-custom"></span> 2 камеры
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="camera-count" value="3" />
+              <span class="checkbox-custom"></span> 3 камеры
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="camera-count" value="4" />
+              <span class="checkbox-custom"></span> 4 камеры
+            </label>
+            <button class="filter-reset-btn">Сбросить</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-header">
+            <span
+              ><i class="fas fa-chevron-down"></i> Основная камера (Мп)</span
+            >
+          </div>
+          <div class="filter-content camera-mp-filter">
+            <label class="filter-checkbox">
+              <input type="checkbox" name="camera-mp" value="0-12" />
+              <span class="checkbox-custom"></span> До 12 Мп
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="camera-mp" value="12-48" />
+              <span class="checkbox-custom"></span> 12-48 Мп
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="camera-mp" value="48-64" />
+              <span class="checkbox-custom"></span> 48-64 Мп
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="camera-mp" value="64-108" />
+              <span class="checkbox-custom"></span> 64-108 Мп
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" name="camera-mp" value="108-999" />
+              <span class="checkbox-custom"></span> 108 Мп и более
+            </label>
+            <button class="filter-reset-btn">Сбросить</button>
+          </div>
+        </div>
+
+        <button class="show-results-btn">Показать</button>
+      </aside>
+
+      <main class="cat-main-container product-catalog-main-content">
+        <section class="product-catalog-section">
+          <h1 class="cat-page-title cat-page-title-desktop">
+            Мобильные телефоны в Кыргызстане
+          </h1>
+
+          <div class="product-grid active" id="page-1">
+            <div
+              class="product-card"
+              data-id="infinix-hot-12i"
+              data-price="4295"
+              data-brand="Infinix"
+              data-memory="64"
+              data-name="Infinix HOT 12i"
+              data-image="https://i.postimg.cc/VkTJVnX3/Infinix-HOT-12i.png"
+              data-camera="13MP"
+              data-megapixels="13"
+              data-camera-count="2"
+            >
+              <a
+                href="product-detail.html?id=infinix-hot-12i"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/VkTJVnX3/Infinix-HOT-12i.png"
+                    alt="Infinix HOT 12i"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Infinix HOT 12i</div>
+              <div class="product-price">
+                4295 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="infinix-hot-12i"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="infinix-hot-12i"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="infinix-hot-12-play"
+              data-price="4495"
+              data-brand="Infinix"
+              data-memory="64"
+              data-name="Infinix HOT 12 Play"
+              data-image="https://i.postimg.cc/WbYzdgYh/Infinix-HOT-12-Play.png"
+              data-camera="13MP"
+              data-megapixels="13"
+              data-camera-count="2"
+            >
+              <a
+                href="product-detail.html?id=infinix-hot-12-play"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/WbYzdgYh/Infinix-HOT-12-Play.png"
+                    alt="Infinix HOT 12 Play"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Infinix HOT 12 Play</div>
+              <div class="product-price">
+                4495 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="infinix-hot-12-play"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="infinix-hot-12-play"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="honor-x9c"
+              data-price="35890"
+              data-brand="Honor"
+              data-memory="256"
+              data-name="Honor X9c"
+              data-image="https://i.postimg.cc/bJPN7TrF/Honor-X9c.png"
+              data-camera="108MP"
+              data-megapixels="108"
+              data-camera-count="3"
+            >
+              <a href="product-detail.html?id=honor-x9c" class="product-link">
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/bJPN7TrF/Honor-X9c.png"
+                    alt="Honor X9c"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Honor X9c</div>
+              <div class="product-price">
+                35890 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="honor-x9c"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="honor-x9c"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="honor-x8c"
+              data-price="24990"
+              data-brand="Honor"
+              data-memory="128"
+              data-name="Honor X8c"
+              data-image="https://i.postimg.cc/zGWNqgsm/Honor-X8c.png"
+              data-camera="48MP"
+              data-megapixels="48"
+              data-camera-count="4"
+            >
+              <a href="product-detail.html?id=honor-x8c" class="product-link">
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/zGWNqgsm/Honor-X8c.png"
+                    alt="Honor X8c"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Honor X8c</div>
+              <div class="product-price">
+                24990 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="honor-x8c"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="honor-x8c"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="honor-x7c"
+              data-price="17590"
+              data-brand="Honor"
+              data-memory="128"
+              data-name="Honor X7c"
+              data-image="https://i.postimg.cc/523VHV2p/Honor-X7c.png"
+              data-camera="50MP"
+              data-megapixels="50"
+              data-camera-count="3"
+            >
+              <a href="product-detail.html?id=honor-x7c" class="product-link">
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/523VHV2p/Honor-X7c.png"
+                    alt="Honor X7c"
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Honor X7c</div>
+              <div class="product-price">
+                17590 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="honor-x7c"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="honor-x7c"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="honor-x6b"
+              data-price="12890"
+              data-brand="Honor"
+              data-memory="64"
+              data-name="Honor X6b"
+              data-image="https://i.postimg.cc/1z3ZwjgS/Honor-X6b.png"
+              data-camera="50MP"
+              data-megapixels="50"
+              data-camera-count="2"
+            >
+              <a href="product-detail.html?id=honor-x6b" class="product-link">
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/1z3ZwjgS/Honor-X6b.png"
+                    alt="Honor X6b"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Honor X6b</div>
+              <div class="product-price">
+                12890 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="honor-x6b"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="honor-x6b"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="xiaomi-redmi-note-14-pro"
+              data-price="23990"
+              data-brand="Xiaomi"
+              data-memory="128"
+              data-name="Xiaomi Redmi Note 14 Pro"
+              data-image="https://i.postimg.cc/GmzWLxX5/Xiaomi-Redmi-Note-14-Pro.png"
+              data-camera="200MP"
+              data-megapixels="200"
+              data-camera-count="3"
+            >
+              <a
+                href="product-detail.html?id=xiaomi-redmi-note-14-pro"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/GmzWLxX5/Xiaomi-Redmi-Note-14-Pro.png"
+                    alt="Xiaomi Redmi Note 14 Pro"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Xiaomi Redmi Note 14 Pro</div>
+              <div class="product-price">
+                23990 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="xiaomi-redmi-note-14-pro"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="xiaomi-redmi-note-14-pro"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="xiaomi-redmi-note-14"
+              data-price="17990"
+              data-brand="Xiaomi"
+              data-memory="64"
+              data-name="Xiaomi Redmi Note 14"
+              data-image="https://i.postimg.cc/Nj0N4qxd/Xiaomi-Redmi-Note-14.png"
+              data-camera="108MP"
+              data-megapixels="108"
+              data-camera-count="3"
+            >
+              <a
+                href="product-detail.html?id=xiaomi-redmi-note-14"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/Nj0N4qxd/Xiaomi-Redmi-Note-14.png"
+                    alt="Xiaomi Redmi Note 14"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Xiaomi Redmi Note 14</div>
+              <div class="product-price">
+                17990 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="xiaomi-redmi-note-14"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="xiaomi-redmi-note-14"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="xiaomi-14t"
+              data-price="48990"
+              data-brand="Xiaomi"
+              data-memory="256"
+              data-name="Xiaomi 14T"
+              data-image="https://i.postimg.cc/vmBpcxjH/Xiaomi-14-T.png"
+              data-camera="50MP"
+              data-megapixels="50"
+              data-camera-count="3"
+            >
+              <a href="product-detail.html?id=xiaomi-14t" class="product-link">
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/vmBpcxjH/Xiaomi-14-T.png"
+                    alt="Xiaomi 14T"
+                    class="product-img"
+                    style="width: 95%; height: 95%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Xiaomi 14T</div>
+              <div class="product-price">
+                48990 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="xiaomi-14t"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="xiaomi-14t"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="infinix-smart-9"
+              data-price="8990"
+              data-brand="Infinix"
+              data-memory="64"
+              data-name="Infinix Smart 9"
+              data-image="https://i.postimg.cc/rsSHv1dg/Infinix-Smart-9.png"
+              data-camera="13MP"
+              data-megapixels="13"
+              data-camera-count="2"
+            >
+              <a
+                href="product-detail.html?id=infinix-smart-9"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/rsSHv1dg/Infinix-Smart-9.png"
+                    alt="Infinix Smart 9"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Infinix Smart 9</div>
+              <div class="product-price">
+                8990 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="infinix-smart-9"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="infinix-smart-9"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="xiaomi-redmi-14c"
+              data-price="9499"
+              data-brand="Xiaomi"
+              data-memory="128"
+              data-name="Xiaomi Redmi 14C"
+              data-image="https://i.postimg.cc/2yVXgr7j/Xiaomi-Redmi-14-C.png"
+              data-camera="50MP"
+              data-megapixels="50"
+              data-camera-count="2"
+            >
+              <a
+                href="product-detail.html?id=xiaomi-redmi-14c"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/2yVXgr7j/Xiaomi-Redmi-14-C.png"
+                    alt=" Xiaomi Redmi 14C "
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Xiaomi Redmi 14C</div>
+              <div class="product-price">
+                9 499 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="xiaomi-redmi-14c"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="xiaomi-redmi-14c"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="xiaomi-redmi-a5"
+              data-price="7799"
+              data-brand="Xiaomi"
+              data-memory="64"
+              data-name="Xiaomi Redmi A5"
+              data-image="https://i.postimg.cc/k4D0PQnd/Xiaomi-Redmi-A5.png"
+              data-camera="13MP"
+              data-megapixels="13"
+              data-camera-count="2"
+            >
+              <a
+                href="product-detail.html?id=xiaomi-redmi-a5"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/k4D0PQnd/Xiaomi-Redmi-A5.png"
+                    alt="Xiaomi Redmi A5"
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Xiaomi Redmi A5</div>
+              <div class="product-price">
+                7 799 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="xiaomi-redmi-a5"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="xiaomi-redmi-a5"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="apple-iphone-14-pro"
+              data-price="109990"
+              data-brand="Apple"
+              data-memory="256"
+              data-name="Apple iPhone 14 Pro"
+              data-image="https://i.postimg.cc/1tSqsS9R/Apple-i-Phone-14-Pro.png"
+              data-camera="48MP"
+              data-megapixels="48"
+              data-camera-count="3"
+            >
+              <a
+                href="product-detail.html?id=apple-iphone-14-pro"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/1tSqsS9R/Apple-i-Phone-14-Pro.png"
+                    alt="Apple iPhone 14 Pro"
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Apple iPhone 14 Pro</div>
+              <div class="product-price">
+                109990 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="apple-iphone-14-pro"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="apple-iphone-14-pro"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="apple-iphone-14"
+              data-price="89990"
+              data-brand="Apple"
+              data-memory="128"
+              data-name="Apple iPhone 14"
+              data-image="https://i.postimg.cc/pdzFwrM1/Apple-i-Phone-14.png"
+              data-camera="12MP"
+              data-megapixels="12"
+              data-camera-count="2"
+            >
+              <a
+                href="product-detail.html?id=apple-iphone-14"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/pdzFwrM1/Apple-i-Phone-14.png"
+                    alt="Apple iPhone 14"
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Apple iPhone 14</div>
+              <div class="product-price">
+                89990 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="apple-iphone-14"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="apple-iphone-14"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="apple-iphone-se"
+              data-price="49990"
+              data-brand="Apple"
+              data-memory="64"
+              data-name="Apple iPhone SE"
+              data-image="https://i.postimg.cc/7hsG3TSb/Apple-i-Phone-SE.png"
+              data-camera="12MP"
+              data-megapixels="12"
+              data-camera-count="1"
+            >
+              <a
+                href="product-detail.html?id=apple-iphone-se"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/7hsG3TSb/Apple-i-Phone-SE.png"
+                    alt="Apple iPhone SE"
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Apple iPhone SE</div>
+              <div class="product-price">
+                49990 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="apple-iphone-se"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="apple-iphone-se"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="apple-iphone-13-mini"
+              data-price="79990"
+              data-brand="Apple"
+              data-memory="128"
+              data-name="Apple iPhone 13 mini"
+              data-image="https://i.postimg.cc/Vk3tZMpC/Apple-i-Phone-13-mini.png"
+              data-camera="12MP"
+              data-megapixels="12"
+              data-camera-count="2"
+            >
+              <a
+                href="product-detail.html?id=apple-iphone-13-mini"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/Vk3tZMpC/Apple-i-Phone-13-mini.png"
+                    alt="Apple iPhone 13 mini"
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Apple iPhone 13 mini</div>
+              <div class="product-price">
+                79990 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="apple-iphone-13-mini"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="apple-iphone-13-mini"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="samsung-galaxy-s23-ultra"
+              data-price="99990"
+              data-brand="Samsung"
+              data-memory="512"
+              data-name="Samsung Galaxy S23 Ultra"
+              data-image="https://i.postimg.cc/pX3yPvCN/Samsung-Galaxy-S23-Ultra.png"
+              data-camera="200MP"
+              data-megapixels="200"
+              data-camera-count="4"
+            >
+              <a
+                href="product-detail.html?id=samsung-galaxy-s23-ultra"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/pX3yPvCN/Samsung-Galaxy-S23-Ultra.png"
+                    alt="Samsung Galaxy S23 Ultra"
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Samsung Galaxy S23 Ultra</div>
+              <div class="product-price">
+                99990 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="samsung-galaxy-s23-ultra"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="samsung-galaxy-s23-ultra"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="samsung-galaxy-a54"
+              data-price="35000"
+              data-brand="Samsung"
+              data-memory="128"
+              data-name="Samsung Galaxy A54"
+              data-image="https://i.postimg.cc/9FDr30Gt/Samsung-Galaxy-A54.png"
+              data-camera="50MP"
+              data-megapixels="50"
+              data-camera-count="3"
+            >
+              <a
+                href="product-detail.html?id=samsung-galaxy-a54"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/9FDr30Gt/Samsung-Galaxy-A54.png"
+                    alt="Samsung Galaxy A54"
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Samsung Galaxy A54</div>
+              <div class="product-price">
+                35000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="samsung-galaxy-a54"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="samsung-galaxy-a54"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="samsung-galaxy-z-fold4"
+              data-price="150000"
+              data-brand="Samsung"
+              data-memory="256"
+              data-name="Samsung Galaxy Z Fold4"
+              data-image="https://i.postimg.cc/s2rXZJbw/Samsung-Galaxy-Z-Fold4.png"
+              data-camera="50MP"
+              data-megapixels="50"
+              data-camera-count="3"
+            >
+              <a
+                href="product-detail.html?id=samsung-galaxy-z-fold4"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/s2rXZJbw/Samsung-Galaxy-Z-Fold4.png"
+                    alt="Samsung Galaxy Z Fold4"
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Samsung Galaxy Z Fold4</div>
+              <div class="product-price">
+                150000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="samsung-galaxy-z-fold4"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="samsung-galaxy-z-fold4"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="samsung-galaxy-a13"
+              data-price="14000"
+              data-brand="Samsung"
+              data-memory="64"
+              data-name="Samsung Galaxy A13"
+              data-image="https://i.postimg.cc/htfxrg4h/Samsung-Galaxy-A13.png"
+              data-camera="50MP"
+              data-megapixels="50"
+              data-camera-count="4"
+            >
+              <a
+                href="product-detail.html?id=samsung-galaxy-a13"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/htfxrg4h/Samsung-Galaxy-A13.png"
+                    alt="Samsung Galaxy A13"
+                    class="product-img"
+                    style="width: 100%; height: 100%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Samsung Galaxy A13</div>
+              <div class="product-price">
+                14000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="samsung-galaxy-a13"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="samsung-galaxy-a13"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="google-pixel-7-pro"
+              data-price="75000"
+              data-brand="Pixel"
+              data-memory="256"
+              data-name="Google Pixel 7 Pro"
+              data-image="https://i.postimg.cc/VsDCQ221/Google-Pixel-7-Pro.png"
+              data-camera="50MP"
+              data-megapixels="50"
+              data-camera-count="3"
+            >
+              <a
+                href="product-detail.html?id=google-pixel-7-pro"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/VsDCQ221/Google-Pixel-7-Pro.png"
+                    alt="Google Pixel 7 Pro"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Google Pixel 7 Pro</div>
+              <div class="product-price">
+                75000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="google-pixel-7-pro"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="google-pixel-7-pro"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="google-pixel-7a"
+              data-price="45000"
+              data-brand="Pixel"
+              data-memory="128"
+              data-name="Google Pixel 7a"
+              data-image="https://i.postimg.cc/xT8b0tSm/Google-Pixel-7a.png"
+              data-camera="64MP"
+              data-megapixels="64"
+              data-camera-count="2"
+            >
+              <a
+                href="product-detail.html?id=google-pixel-7a"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/xT8b0tSm/Google-Pixel-7a.png"
+                    alt="Google Pixel 7a"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Google Pixel 7a</div>
+              <div class="product-price">
+                45000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="google-pixel-7a"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="google-pixel-7a"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="google-pixel-6a"
+              data-price="38000"
+              data-brand="Pixel"
+              data-memory="128"
+              data-name="Google Pixel 6a"
+              data-image="https://i.postimg.cc/QCxKKq9R/Google-Pixel-6a.png"
+              data-camera="12MP"
+              data-megapixels="12"
+              data-camera-count="2"
+            >
+              <a
+                href="product-detail.html?id=google-pixel-6a"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/QCxKKq9R/Google-Pixel-6a.png"
+                    alt="Google Pixel 6a"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Google Pixel 6a</div>
+              <div class="product-price">
+                38000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="google-pixel-6a"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="google-pixel-6a"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="google-pixel-fold"
+              data-price="180000"
+              data-brand="Pixel"
+              data-memory="256"
+              data-name="Google Pixel Fold"
+              data-image="https://i.postimg.cc/pLnhjrrX/Google-Pixel-Fold.png"
+              data-camera="48MP"
+              data-megapixels="48"
+              data-camera-count="3"
+            >
+              <a
+                href="product-detail.html?id=google-pixel-fold"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/pLnhjrrX/Google-Pixel-Fold.png"
+                    alt="Google Pixel Fold"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Google Pixel Fold</div>
+              <div class="product-price">
+                180000 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="google-pixel-fold"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="google-pixel-fold"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="apple-iphone-15-pro-max"
+              data-price="159990"
+              data-brand="Apple"
+              data-memory="256"
+              data-name="Apple iPhone 15 Pro Max"
+              data-image="https://i.postimg.cc/B6C1vz6T/Apple-i-Phone-15-Pro-Max.png"
+              data-camera="48MP"
+              data-megapixels="48"
+              data-camera-count="3"
+            >
+              <a
+                href="product-detail.html?id=apple-iphone-15-pro-max"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/B6C1vz6T/Apple-i-Phone-15-Pro-Max.png"
+                    alt="Apple iPhone 15 Pro Max"
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Apple iPhone 15 Pro Max</div>
+              <div class="product-price">
+                159990 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="apple-iphone-15-pro-max"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="apple-iphone-15-pro-max"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="apple-iphone-15"
+              data-price="109990"
+              data-brand="Apple"
+              data-memory="128"
+              data-name="Apple iPhone 15"
+              data-image="https://i.postimg.cc/T3ymcQ7x/Apple-i-Phone-15.png"
+              data-camera="48MP"
+              data-megapixels="48"
+              data-camera-count="2"
+            >
+              <a
+                href="product-detail.html?id=apple-iphone-15"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/T3ymcQ7x/Apple-i-Phone-15.png"
+                    alt="Apple iPhone 15"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Apple iPhone 15</div>
+              <div class="product-price">
+                109990 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="apple-iphone-15"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="apple-iphone-15"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="samsung-galaxy-s24-ultra"
+              data-price="139990"
+              data-brand="Samsung"
+              data-memory="512"
+              data-name="Samsung Galaxy S24 Ultra"
+              data-image="https://i.postimg.cc/GmYt2fg4/Samsung-Galaxy-S24-Ultra.png"
+              data-camera="200MP"
+              data-megapixels="200"
+              data-camera-count="4"
+            >
+              <a
+                href="product-detail.html?id=samsung-galaxy-s24-ultra"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/GmYt2fg4/Samsung-Galaxy-S24-Ultra.png"
+                    alt="Samsung Galaxy S24 Ultra"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Samsung Galaxy S24 Ultra</div>
+              <div class="product-price">
+                139990 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="samsung-galaxy-s24-ultra"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="samsung-galaxy-s24-ultra"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="samsung-galaxy-a34"
+              data-price="29990"
+              data-brand="Samsung"
+              data-memory="128"
+              data-name="Samsung Galaxy A34"
+              data-image="https://i.postimg.cc/mZXt6CFg/Samsung-Galaxy-A34.png"
+              data-camera="48MP"
+              data-megapixels="48"
+              data-camera-count="3"
+            >
+              <a
+                href="product-detail.html?id=samsung-galaxy-a34"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/mZXt6CFg/Samsung-Galaxy-A34.png"
+                    alt="Samsung Galaxy A34"
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Samsung Galaxy A34</div>
+              <div class="product-price">
+                29990 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="samsung-galaxy-a34"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="samsung-galaxy-a34"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="google-pixel-8-pro"
+              data-price="99990"
+              data-brand="Pixel"
+              data-memory="256"
+              data-name="Google Pixel 8 Pro"
+              data-image="https://i.postimg.cc/KYSKDb37/Google-Pixel-8-Pro.png"
+              data-camera="50MP"
+              data-megapixels="50"
+              data-camera-count="3"
+            >
+              <a
+                href="product-detail.html?id=google-pixel-8-pro"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/KYSKDb37/Google-Pixel-8-Pro.png"
+                    alt="Google Pixel 8 Pro"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Google Pixel 8 Pro</div>
+              <div class="product-price">
+                99990 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="google-pixel-8-pro"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="google-pixel-8-pro"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="google-pixel-8"
+              data-price="79990"
+              data-brand="Pixel"
+              data-memory="128"
+              data-name="Google Pixel 8"
+              data-image="https://i.postimg.cc/m2n1hCb5/Google-Pixel-8.png"
+              data-camera="50MP"
+              data-megapixels="50"
+              data-camera-count="2"
+            >
+              <a
+                href="product-detail.html?id=google-pixel-8"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/m2n1hCb5/Google-Pixel-8.png"
+                    alt="Google Pixel 8"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Google Pixel 8</div>
+              <div class="product-price">
+                79990 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="google-pixel-8"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="google-pixel-8"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="infinix-hot-30"
+              data-price="12990"
+              data-brand="Infinix"
+              data-memory="128"
+              data-name="Infinix Hot 30"
+              data-image="https://i.postimg.cc/C1Jz0fPJ/Infinix-Hot-30.png"
+              data-camera="50MP"
+              data-megapixels="50"
+              data-camera-count="2"
+            >
+              <a
+                href="product-detail.html?id=infinix-hot-30"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/C1Jz0fPJ/Infinix-Hot-30.png"
+                    alt="Infinix Hot 30"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Infinix Hot 30</div>
+              <div class="product-price">
+                12990 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="infinix-hot-30"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="infinix-hot-30"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="infinix-note-30"
+              data-price="18990"
+              data-brand="Infinix"
+              data-memory="256"
+              data-name="Infinix Note 30"
+              data-image="https://i.postimg.cc/6q3Tp5FK/Infinix-Note-30.png"
+              data-camera="64MP"
+              data-megapixels="64"
+              data-camera-count="3"
+            >
+              <a
+                href="product-detail.html?id=infinix-note-30"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/6q3Tp5FK/Infinix-Note-30.png"
+                    alt="Infinix Note 30"
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Infinix Note 30</div>
+              <div class="product-price">
+                18990 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="infinix-note-30"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="infinix-note-30"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="honor-magic5-pro"
+              data-price="89990"
+              data-brand="Honor"
+              data-memory="512"
+              data-name="Honor Magic5 Pro"
+              data-image="https://i.postimg.cc/qRpzWGLz/Honor-Magic5-Pro.png"
+              data-camera="50MP"
+              data-megapixels="50"
+              data-camera-count="3"
+            >
+              <a
+                href="product-detail.html?id=honor-magic5-pro"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/qRpzWGLz/Honor-Magic5-Pro.png"
+                    alt="Honor Magic5 Pro"
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Honor Magic5 Pro</div>
+              <div class="product-price">
+                89990 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="honor-magic5-pro"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="honor-magic5-pro"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="honor-90"
+              data-price="49990"
+              data-brand="Honor"
+              data-memory="256"
+              data-name="Honor 90"
+              data-image="https://i.postimg.cc/9fdDxky6/Honor-90.png"
+              data-camera="200MP"
+              data-megapixels="200"
+              data-camera-count="3"
+            >
+              <a href="product-detail.html?id=honor-90" class="product-link">
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/9fdDxky6/Honor-90.png"
+                    alt="Honor 90"
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Honor 90</div>
+              <div class="product-price">
+                49990 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="honor-90"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="honor-90"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="xiaomi-13-ultra"
+              data-price="109990"
+              data-brand="Xiaomi"
+              data-memory="512"
+              data-name="Xiaomi 13 Ultra"
+              data-image="https://i.postimg.cc/0N0NGwsx/Xiaomi-13-Ultra.png"
+              data-camera="50MP"
+              data-megapixels="50"
+              data-camera-count="4"
+            >
+              <a
+                href="product-detail.html?id=xiaomi-13-ultra"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/0N0NGwsx/Xiaomi-13-Ultra.png"
+                    alt="Xiaomi 13 Ultra"
+                    class="product-img"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Xiaomi 13 Ultra</div>
+              <div class="product-price">
+                109990 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="xiaomi-13-ultra"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="xiaomi-13-ultra"
+                ></i>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-id="xiaomi-redmi-note-12"
+              data-price="16990"
+              data-brand="Xiaomi"
+              data-memory="128"
+              data-name="Xiaomi Redmi Note 12"
+              data-image="https://i.postimg.cc/mDZgmgL9/Xiaomi-Redmi-Note-12.png"
+              data-camera="50MP"
+              data-megapixels="50"
+              data-camera-count="3"
+            >
+              <a
+                href="product-detail.html?id=xiaomi-redmi-note-12"
+                class="product-link"
+              >
+                <div class="product-image-wrapper">
+                  <img
+                    src="https://i.postimg.cc/mDZgmgL9/Xiaomi-Redmi-Note-12.png"
+                    alt="Xiaomi Redmi Note 12"
+                    class="product-img"
+                    style="width: 90%; height: 90%"
+                  />
+                </div>
+              </a>
+              <div class="product-name">Xiaomi Redmi Note 12</div>
+              <div class="product-price">
+                16990 с
+                <div class="product-actions product-actions-desktop">
+                  <i class="fas fa-heart fav-icon"></i>
+                  <i
+                    class="fas fa-shopping-cart cart-icon"
+                    data-product-id="xiaomi-redmi-note-12"
+                  ></i>
+                </div>
+              </div>
+              <div class="product-actions product-actions-mobile">
+                <i class="fas fa-heart fav-icon"></i>
+                <i
+                  class="fas fa-shopping-cart cart-icon"
+                  data-product-id="xiaomi-redmi-note-12"
+                ></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-pagination">
+            <div class="product-pagination-links">
+              <a href="#" class="product-pagination-link active" data-page="1"
+                >1</a
+              >
+              <a href="#" class="product-pagination-link" data-page="2">2</a>
+              <a href="#" class="product-pagination-link" data-page="3">3</a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div class="icons bottom-icons">
+      <a href="../index.html" class="main-page-link-js">
+        <i class="fas fa-home"></i> <span>Главное</span>
+      </a>
+      <a href="favorite.html" class="fav-link">
+        <i class="fas fa-heart"></i>
+        <span>Избранное</span>
+        <span class="fav-counter">0</span>
+      </a>
+      <a href="cart.html" class="cart-link">
+        <i class="fas fa-shopping-cart"></i>
+        <span>Корзина</span>
+        <span class="cart-counter">0</span>
+      </a>
+      <a class="open-login-modal-btn-mob">
+        <i class="fas fa-user"></i> <span>Войти</span>
+      </a>
+    </div>
+
+    <footer>
+      <div class="mobile-footer-buttons">
+        <div class="mobile-footer-button company-button">
+          Компания <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="company-dropdown">
+          <a href="company.html">О компании</a>
+          <a href="privacy_policy.html">Политика конфиденциальности</a>
+          <a href="sell_rules.html">Правила продаж</a>
+          <a href="personal_data.html">Персональные данные</a>
+        </div>
+        <div class="mobile-footer-button buyers-button">
+          Покупателям <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="buyers-dropdown">
+          <a href="how_order.html">Как оформить заказ</a>
+          <a href="payment_ways.html">Способы оплаты</a>
+          <a href="delivery.html">Доставка</a>
+          <a href="exchange_return_warranty.html">Обмен, возврат, гарантия</a>
+        </div>
+      </div>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>Компания</h3>
+          <ul>
+            <li>
+              <a href="company.html">О компании</a>
+            </li>
+            <li>
+              <a href="privacy_policy.html">Политика конфиденциальности</a>
+            </li>
+            <li>
+              <a href="sell_rules.html">Правила продаж</a>
+            </li>
+            <li>
+              <a href="personal_data.html">Персональные данные</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Покупателям</h3>
+          <ul>
+            <li>
+              <a href="how_order.html">Как оформить заказ</a>
+            </li>
+            <li>
+              <a href="payment_ways.html">Способы оплаты</a>
+            </li>
+            <li>
+              <a href="delivery.html">Доставка</a>
+            </li>
+            <li>
+              <a href="exchange_return_warranty.html"
+                >Обмен, возврат, гарантия</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column connect-us">
+          <h3>Оставайтесь на связи</h3>
+          <div class="social-icons">
+            <a href="https://example.com"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://example.com"><i class="fab fa-instagram"></i></a>
+            <a href="https://example.com"><i class="fab fa-vk"></i></a>
+          </div>
+          <ul>
+            <li>
+              <a href="adress.html">Адреса магазинов Бишкек</a>
+            </li>
+            <li>
+              <a href="feedback.html">Обратная связь</a>
+            </li>
+            <li>
+              <a href="service_center.html">Сервисный центр</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          2023-2025 © Компания. Администрация Сайта не несет ответственности за
+          размещаемые Пользователями материалы (в т.ч. информацию и
+          изображения), их содержание и качество.
+        </p>
+      </div>
+    </footer>
+
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Вход или регистрация</h2>
+        <form>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Введите ваш Email"
+              autocomplete="off"
+            />
+          </div>
+          <div class="input-group password-input-container">
+            <label for="password">Пароль</label>
+            <div class="password-field-wrapper">
+              <input
+                type="password"
+                id="password"
+                placeholder="Введите пароль"
+                autocomplete="new-password"
+              />
+              <button type="button" class="toggle-password-visibility">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <p
+            id="passwordError"
+            style="
+              color: red;
+              font-size: 12px;
+              margin-top: -15px;
+              margin-bottom: 20px;
+              display: none;
+            "
+          ></p>
+
+          <button type="submit" class="login-button">Войти</button>
+        </form>
+        <p class="privacy-text">
+          Нажимая кнопку "Войти", Вы соглашаетесь с условиями
+          <a href="#">политики конфиденциальности</a>
+        </p>
+      </div>
+    </div>
+
+    <script type="module" src="../scripts/scripts.js"></script>
+    <script src="../scripts/product-listing.js"></script>
+  </body>
+</html>

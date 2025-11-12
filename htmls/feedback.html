@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Обратная связь</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="icon" type="image/png" href="../images/logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="top-header">
+      <div class="header-row top-line">
+        <div class="location">
+          <span><i class="fas fa-location-dot"></i> Бишкек</span>
+          <button id="theme-toggle" class="theme-toggle-button">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+        <div class="contacts"></div>
+        <div class="contacts">
+          <a
+            href="https://example.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span><i class="fab fa-instagram insta-icon"></i></span>
+          </a>
+          <a
+            href="https://example.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span><i class="fab fa-whatsapp insta-icon"></i></span>
+          </a>
+          <a href="tel:+996550556612">+996 550-556-612</a>
+          <span><i class="fas fa-map"></i></span>
+          <a href="adress.html">Магазины</a>
+          <a href="vacancies.html">Вакансии</a>
+        </div>
+      </div>
+
+      <div class="header-row middle-line">
+        <a href="../index.html" class="logo desktop-logo">
+          <img src="../images/logo.png" alt="DNS Logo" height="40" />
+        </a>
+        <div class="header-search-container">
+          <div class="search-bar">
+            <span class="icon-desktop"><i class="fas fa-bars"></i></span>
+            <span class="icon-mobile"
+              ><i class="fas fa-magnifying-glass"></i
+            ></span>
+
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Поиск по сайту"
+              autocomplete="off"
+            />
+            <span
+              id="clear-search"
+              class="clear-search-icon"
+              style="display: none"
+              >&times;</span
+            >
+          </div>
+          <section class="search-results-container">
+            <div id="product-results-grid"></div>
+          </section>
+        </div>
+
+        <div class="icons upper-icons">
+          <div class="icon-container">
+            <a href="favorite.html" class="fav-link">
+              <i class="far fa-heart fav-icon fas"></i>
+              <span>Избранное</span>
+            </a>
+            <span class="fav-counter">0</span>
+          </div>
+          <div class="icon-container">
+            <a href="cart.html" class="cart-link">
+              <i class="fas fa-shopping-cart cart-icon"></i>
+              <span>Корзина</span>
+            </a>
+            <span class="cart-counter">0</span>
+          </div>
+          <a href="#" class="open-login-modal-btn">
+            <i class="fas fa-user"></i>
+            <span>Войти</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="header-row bottom-bar nav-categories">
+        <a href="phones.html">Смартфоны</a>
+        <a href="tv.html">Телевизоры</a>
+        <a href="laptop.html">Ноутбуки</a>
+        <a href="tablets.html">Планшеты</a>
+      </div>
+    </div>
+
+    <div class="icons bottom-icons">
+      <a href="../index.html" class="main-page-link-js">
+        <i class="fas fa-home"></i> <span>Главное</span>
+      </a>
+      <a href="favorite.html" class="fav-link">
+        <i class="fas fa-heart"></i>
+        <span>Избранное</span>
+        <span class="fav-counter">0</span>
+      </a>
+      <a href="cart.html" class="cart-link">
+        <i class="fas fa-shopping-cart"></i>
+        <span>Корзина</span>
+        <span class="cart-counter">0</span>
+      </a>
+      <a class="open-login-modal-btn-mob">
+        <i class="fas fa-user"></i> <span>Войти</span>
+      </a>
+    </div>
+
+    <section class="super-contacts-section">
+      <h2>Контакты</h2>
+
+      <div class="super-contact-item">
+        <p>Магазин DNS ул. Юнусалиева 171/2 2 этаж</p>
+        <span class="phone">WhatsApp<br /><b>+996 (123) 456 789</b></span>
+      </div>
+
+      <div class="super-contact-item">
+        <p>Магазин DNS ул. Фрунзе 340 (ТЦ Метрополь) 2 этаж</p>
+        <span class="phone">WhatsApp<br /><b>+996 (123) 456 789</b></span>
+      </div>
+
+      <div class="super-contact-item">
+        <p>Магазин DNS пр-т. Чынгыза Айтматова 299в (ТРЦ Ала-Арча) 2 этаж</p>
+        <span class="phone">WhatsApp<br /><b>+996 (123) 456 789</b></span>
+      </div>
+
+      <div class="super-contact-item">
+        <p>Отдел по работе с юр.лицами</p>
+        <span class="phone">WhatsApp<br /><b>+996 (123) 456 789</b></span>
+      </div>
+
+      <div class="super-contact-item">
+        <p>Работа «под заказ»</p>
+        <div>
+          <span class="phone"
+            >WhatsApp<br /><b>+996 (123) 456 789</b><br /><b
+              >+996 (123) 456 789</b
+            ></span
+          ><br />
+        </div>
+      </div>
+
+      <div class="super-contact-item">
+        <p>Контакты для арендодателей</p>
+        <span class="phone">WhatsApp<br /><b>+996 (123) 456 789</b></span>
+      </div>
+
+      <div class="super-contact-item">
+        <p>Контакты для поставщиков</p>
+        <span class="phone">WhatsApp<br /><b>+996 (123) 456 789</b></span>
+      </div>
+    </section>
+    <footer>
+      <div class="mobile-footer-buttons">
+        <div class="mobile-footer-button company-button">
+          Компания <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="company-dropdown">
+          <a href="company.html">О компании</a>
+          <a href="privacy_policy.html">Политика конфиденциальности</a>
+          <a href="sell_rules.html">Правила продаж</a>
+          <a href="personal_data.html">Персональные данные</a>
+        </div>
+        <div class="mobile-footer-button buyers-button">
+          Покупателям <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="buyers-dropdown">
+          <a href="how_order.html">Как оформить заказ</a>
+          <a href="payment_ways.html">Способы оплаты</a>
+          <a href="delivery.html">Доставка</a>
+          <a href="exchange_return_warranty.html">Обмен, возврат, гарантия</a>
+        </div>
+      </div>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>Компания</h3>
+          <ul>
+            <li>
+              <a href="company.html">О компании</a>
+            </li>
+            <li>
+              <a href="privacy_policy.html">Политика конфиденциальности</a>
+            </li>
+            <li>
+              <a href="sell_rules.html">Правила продаж</a>
+            </li>
+            <li>
+              <a href="personal_data.html">Персональные данные</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Покупателям</h3>
+          <ul>
+            <li>
+              <a href="how_order.html">Как оформить заказ</a>
+            </li>
+            <li>
+              <a href="payment_ways.html">Способы оплаты</a>
+            </li>
+            <li>
+              <a href="delivery.html">Доставка</a>
+            </li>
+            <li>
+              <a href="exchange_return_warranty.html"
+                >Обмен, возврат, гарантия</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column connect-us">
+          <h3>Оставайтесь на связи</h3>
+          <div class="social-icons">
+            <a href="https://example.com"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://example.com"><i class="fab fa-instagram"></i></a>
+            <a href="https://example.com"><i class="fab fa-vk"></i></a>
+          </div>
+          <ul>
+            <li>
+              <a href="adress.html">Адреса магазинов Бишкек</a>
+            </li>
+            <li>
+              <a href="feedback.html">Обратная связь</a>
+            </li>
+            <li>
+              <a href="service_center.html">Сервисный центр</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          2023-2025 © Компания. Администрация Сайта не несет ответственности за
+          размещаемые Пользователями материалы (в т.ч. информацию и
+          изображения), их содержание и качество.
+        </p>
+      </div>
+    </footer>
+
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Вход или регистрация</h2>
+        <form>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Введите ваш Email"
+              autocomplete="off"
+            />
+          </div>
+          <div class="input-group password-input-container">
+            <label for="password">Пароль</label>
+            <div class="password-field-wrapper">
+              <input
+                type="password"
+                id="password"
+                placeholder="Введите пароль"
+                autocomplete="new-password"
+              />
+              <button type="button" class="toggle-password-visibility">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <p
+            id="passwordError"
+            style="
+              color: red;
+              font-size: 12px;
+              margin-top: -15px;
+              margin-bottom: 20px;
+              display: none;
+            "
+          ></p>
+
+          <button type="submit" class="login-button">Войти</button>
+        </form>
+        <p class="privacy-text">
+          Нажимая кнопку "Войти", Вы соглашаетесь с условиями
+          <a href="#">политики конфиденциальности</a>
+        </p>
+      </div>
+    </div>
+    <script type="module" src="../scripts/scripts.js"></script>
+  </body>
+</html>

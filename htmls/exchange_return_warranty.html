@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Обмен, возврат, гарантия</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="icon" type="image/png" href="../images/logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="top-header">
+      <div class="header-row top-line">
+        <div class="location">
+          <span><i class="fas fa-location-dot"></i> Бишкек</span>
+          <button id="theme-toggle" class="theme-toggle-button">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+        <div class="contacts"></div>
+        <div class="contacts">
+          <a
+            href="https://example.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span><i class="fab fa-instagram insta-icon"></i></span>
+          </a>
+          <a
+            href="https://example.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span><i class="fab fa-whatsapp insta-icon"></i></span>
+          </a>
+          <a href="tel:+996550556612">+996 550-556-612</a>
+          <span><i class="fas fa-map"></i></span>
+          <a href="adress.html">Магазины</a>
+          <a href="vacancies.html">Вакансии</a>
+        </div>
+      </div>
+
+      <div class="header-row middle-line">
+        <a href="../index.html" class="logo desktop-logo">
+          <img src="../images/logo.png" alt="DNS Logo" height="40" />
+        </a>
+        <div class="header-search-container">
+          <div class="search-bar">
+            <span class="icon-desktop"><i class="fas fa-bars"></i></span>
+            <span class="icon-mobile"
+              ><i class="fas fa-magnifying-glass"></i
+            ></span>
+
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Поиск по сайту"
+              autocomplete="off"
+            />
+            <span
+              id="clear-search"
+              class="clear-search-icon"
+              style="display: none"
+              >&times;</span
+            >
+          </div>
+          <section class="search-results-container">
+            <div id="product-results-grid"></div>
+          </section>
+        </div>
+
+        <div class="icons upper-icons">
+          <div class="icon-container">
+            <a href="favorite.html" class="fav-link">
+              <i class="far fa-heart fav-icon fas"></i>
+              <span>Избранное</span>
+            </a>
+            <span class="fav-counter">0</span>
+          </div>
+          <div class="icon-container">
+            <a href="cart.html" class="cart-link">
+              <i class="fas fa-shopping-cart cart-icon"></i>
+              <span>Корзина</span>
+            </a>
+            <span class="cart-counter">0</span>
+          </div>
+          <a href="#" class="open-login-modal-btn">
+            <i class="fas fa-user"></i>
+            <span>Войти</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="header-row bottom-bar nav-categories">
+        <a href="phones.html">Смартфоны</a>
+        <a href="tv.html">Телевизоры</a>
+        <a href="laptop.html">Ноутбуки</a>
+        <a href="tablets.html">Планшеты</a>
+      </div>
+    </div>
+
+    <div class="icons bottom-icons">
+      <a href="../index.html" class="main-page-link-js">
+        <i class="fas fa-home"></i> <span>Главное</span>
+      </a>
+      <a href="favorite.html" class="fav-link">
+        <i class="fas fa-heart"></i>
+        <span>Избранное</span>
+        <span class="fav-counter">0</span>
+      </a>
+      <a href="cart.html" class="cart-link">
+        <i class="fas fa-shopping-cart"></i>
+        <span>Корзина</span>
+        <span class="cart-counter">0</span>
+      </a>
+      <a class="open-login-modal-btn-mob">
+        <i class="fas fa-user"></i> <span>Войти</span>
+      </a>
+    </div>
+
+    <section class="company-info-section exchange-return-warranty-section">
+      <div class="company-container">
+        <div class="history">
+          <h2 style="color: #0099ff">Возврат надлежащего качества</h2>
+          <p>
+            Вы вправе обменять товар надлежащего качества на аналогичный товар в
+            течение 14 дней, не считая дня покупки. Обращаем Ваше внимание, что
+            основная часть нашего ассортимента - технически сложные товары
+            бытового назначения (электроника, фотоаппаратура, бытовая техника и
+            т.д.). Указанные товары, в соответствии с законами КР, обмену как
+            товары надлежащего качества не подлежат. Возврат таких товаров не
+            предусмотрен.
+          </p>
+
+          <h2 style="color: #0099ff">Возврат ненадлежащего качества</h2>
+          <p>
+            Если в приобретенном Вами товаре выявлен недостаток, вы вправе по
+            своему выбору заявить одно из требований, указанных в законе о
+            защите прав потребителей. Для этого можете обратиться в ближайший
+            магазин DNS. Тем не менее, если указанный товар относится к
+            технически сложным, то указанные требования могут быть заявлены
+            только в течение 15 календарных дней с даты покупки.
+          </p>
+          <p>
+            По истечении 15 дней предъявление указанных требований возможно в
+            случаях если:
+          </p>
+          <ul>
+            <li>обнаружен существенный недостаток;</li>
+            <li>нарушены сроки устранения недостатков;</li>
+            <li>
+              товар не может использоваться в совокупности более тридцати дней в
+              течение каждого гарантийного срока в связи с необходимостью
+              устранения производственных недостатков.
+            </li>
+          </ul>
+
+          <h2 style="color: #0099ff">
+            Гарантийное обслуживание неисправного товара
+          </h2>
+          <p>
+            Если в купленном Вами товаре в течение установленного гарантийного
+            срока обнаружены недостатки, вы по своему выбору вправе:
+          </p>
+          <ul>
+            <li>
+              потребовать замены на товар этой же марки (этой же модели и (или)
+              артикула);
+            </li>
+            <li>потребовать соразмерного уменьшения покупной цены;</li>
+            <li>
+              потребовать незамедлительного безвозмездного устранения
+              недостатков товара или возмещения расходов на их исправление
+              потребителем или третьим лицом;
+            </li>
+            <li>
+              отказаться от исполнения договора купли-продажи и потребовать
+              возврата уплаченной за товар суммы. В этом случае вы обязаны
+              вернуть товар с недостатками продавцу.
+            </li>
+          </ul>
+          <p>
+            В отношении технически сложного товара вы в случае обнаружения в нем
+            недостатков по своему выбору вправе:
+          </p>
+          <ul>
+            <li>
+              отказаться от исполнения договора купли-продажи и потребовать
+              возврата уплаченной за товар суммы;
+            </li>
+            <li>
+              предъявить требование о его замене на товар этой же марки (модели,
+              артикула) или на такой же товар другой марки (модели, артикула) с
+              соответствующим перерасчетом покупной цены.
+            </li>
+          </ul>
+          <p>
+            Срок предъявления вышеназванных требований составляет 15 дней со дня
+            передачи вам такого товара.
+          </p>
+          <p>
+            По истечении указанного 15-дневного срока данные требования подлежат
+            удовлетворению в одном из следующих случаев:
+          </p>
+          <ul>
+            <li>обнаружение существенного недостатка товара;</li>
+            <li>
+              нарушение установленных законом КР «О защите прав потребителей»
+              сроков устранения недостатков товара;
+            </li>
+            <li>
+              невозможность использования товара в течение каждого года
+              гарантийного срока в совокупности более чем тридцать дней
+              вследствие неоднократного устранения его различных недостатков.
+            </li>
+          </ul>
+
+          <h2 style="color: #0099ff">Часто задаваемые вопросы</h2>
+          <p>На какие случаи не распространяется гарантия?</p>
+          <ul>
+            <li>
+              Неисправность устройства вызвана нарушением правил его
+              эксплуатации, транспортировки и хранения, изложенных в
+              «Руководстве пользователя».
+            </li>
+            <li>
+              На устройстве отсутствует, нарушен или не читается оригинальный
+              серийный номер.
+            </li>
+            <li>
+              На устройстве отсутствуют или нарушены заводские, или гарантийные
+              пломбы и наклейки.
+            </li>
+            <li>
+              Ремонт, техническое обслуживание или модернизация устройства
+              производились лицами, не уполномоченными на то
+              компанией-производителем.
+            </li>
+            <li>
+              Дефекты устройства вызваны использованием устройства с программным
+              обеспечением, не входящим в комплект поставки устройства, или не
+              одобренным для совместного использования производителем
+              устройства.
+            </li>
+          </ul>
+
+          <h2 style="color: #0099ff">Потерян чек. Что делать?</h2>
+          <p>
+            Конечно, старайтесь сохранять чек о покупке. Так вы сможете
+            сэкономить свое время при гарантийном обращении.
+          </p>
+          <p>Если чек был утерян или испорчен, то:</p>
+          <ul>
+            <li>
+              постарайтесь заранее вспомнить, когда и где вы приобретали товар
+              (точная или приблизительная дата покупки, магазин);
+            </li>
+            <li>
+              приобретали ли вы вместе с товаром какие-либо аксессуары, другие
+              устройства;
+            </li>
+            <li>
+              обратитесь в сервисный центр или магазин, имея при себе товар и
+              всю информацию о его покупке.
+            </li>
+          </ul>
+          <p>
+            Специалист найдет вашу покупку в базе и предложит вариант решения в
+            сложившейся ситуации.
+          </p>
+          <p>Надеемся, мы были вам полезны!</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="mobile-footer-buttons">
+        <div class="mobile-footer-button company-button">
+          Компания <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="company-dropdown">
+          <a href="company.html">О компании</a>
+          <a href="privacy_policy.html">Политика конфиденциальности</a>
+          <a href="sell_rules.html">Правила продаж</a>
+          <a href="personal_data.html">Персональные данные</a>
+        </div>
+        <div class="mobile-footer-button buyers-button">
+          Покупателям <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="buyers-dropdown">
+          <a href="how_order.html">Как оформить заказ</a>
+          <a href="payment_ways.html">Способы оплаты</a>
+          <a href="delivery.html">Доставка</a>
+          <a href="exchange_return_warranty.html">Обмен, возврат, гарантия</a>
+        </div>
+      </div>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>Компания</h3>
+          <ul>
+            <li>
+              <a href="company.html">О компании</a>
+            </li>
+            <li>
+              <a href="privacy_policy.html">Политика конфиденциальности</a>
+            </li>
+            <li>
+              <a href="sell_rules.html">Правила продаж</a>
+            </li>
+            <li>
+              <a href="personal_data.html">Персональные данные</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Покупателям</h3>
+          <ul>
+            <li>
+              <a href="how_order.html">Как оформить заказ</a>
+            </li>
+            <li>
+              <a href="payment_ways.html">Способы оплаты</a>
+            </li>
+            <li>
+              <a href="delivery.html">Доставка</a>
+            </li>
+            <li>
+              <a href="exchange_return_warranty.html"
+                >Обмен, возврат, гарантия</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column connect-us">
+          <h3>Оставайтесь на связи</h3>
+          <div class="social-icons">
+            <a href="https://example.com"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://example.com"><i class="fab fa-instagram"></i></a>
+            <a href="https://example.com"><i class="fab fa-vk"></i></a>
+          </div>
+          <ul>
+            <li>
+              <a href="adress.html">Адреса магазинов Бишкек</a>
+            </li>
+            <li>
+              <a href="feedback.html">Обратная связь</a>
+            </li>
+            <li>
+              <a href="service_center.html">Сервисный центр</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          2023-2025 © Компания. Администрация Сайта не несет ответственности за
+          размещаемые Пользователями материалы (в т.ч. информацию и
+          изображения), их содержание и качество.
+        </p>
+      </div>
+    </footer>
+
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Вход или регистрация</h2>
+        <form>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Введите ваш Email"
+              autocomplete="off"
+            />
+          </div>
+          <div class="input-group password-input-container">
+            <label for="password">Пароль</label>
+            <div class="password-field-wrapper">
+              <input
+                type="password"
+                id="password"
+                placeholder="Введите пароль"
+                autocomplete="new-password"
+              />
+              <button type="button" class="toggle-password-visibility">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <p
+            id="passwordError"
+            style="
+              color: red;
+              font-size: 12px;
+              margin-top: -15px;
+              margin-bottom: 20px;
+              display: none;
+            "
+          ></p>
+
+          <button type="submit" class="login-button">Войти</button>
+        </form>
+        <p class="privacy-text">
+          Нажимая кнопку "Войти", Вы соглашаетесь с условиями
+          <a href="#">политики конфиденциальности</a>
+        </p>
+      </div>
+    </div>
+    <script type="module" src="../scripts/scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Избранное</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="icon" type="image/png" href="../images/logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="top-header">
+      <div class="header-row top-line">
+        <div class="location">
+          <span><i class="fas fa-location-dot"></i> Бишкек</span>
+          <button id="theme-toggle" class="theme-toggle-button">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+        <div class="contacts"></div>
+        <div class="contacts">
+          <a
+            href="https://example.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span><i class="fab fa-instagram insta-icon"></i></span>
+          </a>
+          <a
+            href="https://example.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span><i class="fab fa-whatsapp insta-icon"></i></span>
+          </a>
+          <a href="tel:+996550556612">+996 550-556-612</a>
+          <span><i class="fas fa-map"></i></span>
+          <a href="adress.html">Магазины</a>
+          <a href="vacancies.html">Вакансии</a>
+        </div>
+      </div>
+
+      <div class="header-row middle-line">
+        <a href="../index.html" class="logo desktop-logo">
+          <img src="../images/logo.png" alt="DNS Logo" height="40" />
+        </a>
+        <div class="header-search-container">
+          <div class="search-bar">
+            <span class="icon-desktop"><i class="fas fa-bars"></i></span>
+            <span class="icon-mobile"
+              ><i class="fas fa-magnifying-glass"></i
+            ></span>
+
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Поиск по сайту"
+              autocomplete="off"
+            />
+            <span
+              id="clear-search"
+              class="clear-search-icon"
+              style="display: none"
+              >&times;</span
+            >
+          </div>
+          <section class="search-results-container">
+            <div id="product-results-grid"></div>
+          </section>
+        </div>
+
+        <div class="icons upper-icons">
+          <div class="icon-container">
+            <a href="favorite.html" class="fav-link">
+              <i class="far fa-heart fav-icon fas"></i>
+              <span>Избранное</span>
+            </a>
+            <span class="fav-counter">0</span>
+          </div>
+          <div class="icon-container">
+            <a href="cart.html" class="cart-link">
+              <i class="fas fa-shopping-cart cart-icon"></i>
+              <span>Корзина</span>
+            </a>
+            <span class="cart-counter">0</span>
+          </div>
+          <a href="#" class="open-login-modal-btn">
+            <i class="fas fa-user"></i>
+            <span>Войти</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="header-row bottom-bar nav-categories">
+        <a href="phones.html">Смартфоны</a>
+        <a href="tv.html">Телевизоры</a>
+        <a href="laptop.html">Ноутбуки</a>
+        <a href="tablets.html">Планшеты</a>
+      </div>
+    </div>
+
+    <section class="favorites-section">
+      <h1 class="fav-page-title">Избранное</h1>
+      <div class="favorites-grid" id="favorites-container">
+        <p class="empty-favorites-message" id="empty-favorites-message">
+          Ваш список избранного пуст.
+        </p>
+      </div>
+
+      <div class="favorites-summary" id="favorites-summary">
+        <div class="favorites-total">
+          Общая сумма: <span id="favorites-total-price">0</span> с
+        </div>
+        <div class="favorites-actions-bottom">
+          <button class="add-all-to-cart-btn">
+            <i class="fas fa-cart-plus"></i> Добавить все в корзину
+          </button>
+          <button class="clear-favorites-btn">
+            <i class="fas fa-trash-alt"></i> Очистить избранное
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="icons bottom-icons">
+      <a href="../index.html" class="main-page-link-js">
+        <i class="fas fa-home"></i> <span>Главное</span>
+      </a>
+      <a href="favorite.html" class="fav-link">
+        <i class="fas fa-heart"></i>
+        <span>Избранное</span>
+        <span class="fav-counter">0</span>
+      </a>
+      <a href="cart.html" class="cart-link">
+        <i class="fas fa-shopping-cart"></i>
+        <span>Корзина</span>
+        <span class="cart-counter">0</span>
+      </a>
+      <a class="open-login-modal-btn-mob">
+        <i class="fas fa-user"></i> <span>Войти</span>
+      </a>
+    </div>
+
+    <section class="categories-section">
+      <div class="category-grid">
+        <a href="tablets.html" class="category-card-link">
+          <div class="category-card">
+            <div class="category-image">
+              <img src="планшетты1.png" alt="Планшеты" loading="lazy" />
+            </div>
+            <div class="category-title">Планшеты</div>
+          </div>
+        </a>
+
+        <a href="phones.html" class="category-card-link">
+          <div class="category-card">
+            <div class="category-image">
+              <img src="телефон1.png" alt="Смартфоны" loading="lazy" />
+            </div>
+            <div class="category-title">Смартфоны</div>
+          </div>
+        </a>
+        <a href="tv.html" class="category-card-link">
+          <div class="category-card">
+            <div class="category-image">
+              <img src="телевизор1.png" alt="TV" loading="lazy" />
+            </div>
+            <div class="category-title">TV</div>
+          </div>
+        </a>
+        <a href="laptop.html" class="category-card-link">
+          <div class="category-card">
+            <div class="category-image">
+              <img src="ноутбук1.png" alt="ноутбук" loading="lazy" />
+            </div>
+            <div class="category-title">Ноутбуки</div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="mobile-footer-buttons">
+        <div class="mobile-footer-button company-button">
+          Компания <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="company-dropdown">
+          <a href="./htmls/company.html">О компании</a>
+          <a href="./htmls/privacy_policy.html">Политика конфиденциальности</a>
+          <a href="./htmls/sell_rules.html">Правила продаж</a>
+          <a href="./htmls/personal_data.html">Персональные данные</a>
+        </div>
+        <div class="mobile-footer-button buyers-button">
+          Покупателям <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="buyers-dropdown">
+          <a href="./htmls/how_order.html">Как оформить заказ</a>
+          <a href="./htmls/payment_ways.html">Способы оплаты</a>
+          <a href="./htmls/delivery.html">Доставка</a>
+          <a href="./htmls/exchange_return_warranty.html"
+            >Обмен, возврат, гарантия</a
+          >
+        </div>
+      </div>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>Компания</h3>
+          <ul>
+            <li>
+              <a href="./htmls/company.html">О компании</a>
+            </li>
+            <li>
+              <a href="./htmls/privacy_policy.html"
+                >Политика конфиденциальности</a
+              >
+            </li>
+            <li>
+              <a href="./htmls/sell_rules.html">Правила продаж</a>
+            </li>
+            <li>
+              <a href="./htmls/personal_data.html">Персональные данные</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Покупателям</h3>
+          <ul>
+            <li>
+              <a href="./htmls/how_order.html">Как оформить заказ</a>
+            </li>
+            <li>
+              <a href="./htmls/payment_ways.html">Способы оплаты</a>
+            </li>
+            <li>
+              <a href="./htmls/delivery.html">Доставка</a>
+            </li>
+            <li>
+              <a href="./htmls/exchange_return_warranty.html"
+                >Обмен, возврат, гарантия</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column connect-us">
+          <h3>Оставайтесь на связи</h3>
+          <div class="social-icons">
+            <a href="https://example.com"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://example.com"><i class="fab fa-instagram"></i></a>
+            <a href="https://example.com"><i class="fab fa-vk"></i></a>
+          </div>
+          <ul>
+            <li>
+              <a href="./htmls/adress.html">Адреса магазинов Бишкек</a>
+            </li>
+            <li>
+              <a href="./htmls/feedback.html">Обратная связь</a>
+            </li>
+            <li>
+              <a href="./htmls/service_center.html">Сервисный центр</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          2023-2025 © Компания. Администрация Сайта не несет ответственности за
+          размещаемые Пользователями материалы (в т.ч. информацию и
+          изображения), их содержание и качество.
+        </p>
+      </div>
+    </footer>
+
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Вход или регистрация</h2>
+        <form>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Введите ваш Email"
+              autocomplete="off"
+            />
+          </div>
+          <div class="input-group password-input-container">
+            <label for="password">Пароль</label>
+            <div class="password-field-wrapper">
+              <input
+                type="password"
+                id="password"
+                placeholder="Введите пароль"
+                autocomplete="new-password"
+              />
+              <button type="button" class="toggle-password-visibility">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <p
+            id="passwordError"
+            style="
+              color: red;
+              font-size: 12px;
+              margin-top: -15px;
+              margin-bottom: 20px;
+              display: none;
+            "
+          ></p>
+
+          <button type="submit" class="login-button">Войти</button>
+        </form>
+        <p class="privacy-text">
+          Нажимая кнопку "Войти", Вы соглашаетесь с условиями
+          <a href="#">политики конфиденциальности</a>
+        </p>
+      </div>
+    </div>
+
+    <script type="module" src="../scripts/scripts.js"></script>
+
+    <script type="module" src="../scripts/favorites.js"></script>
+  </body>
+</html>
