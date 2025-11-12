@@ -735,11 +735,31 @@ footer {
 
 .company-dropdown,
 .buyers-dropdown {
-  display: none;
-  background-color: var(--mobile-dropdown-bg); /* Используем переменную */
-  padding: 10px 15px;
-  border-radius: 8px;
+  /* Исходное состояние: скрыто */
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden; /* Важно, чтобы контент не выходил */
+  visibility: hidden; /* Скрывает элемент, пока не откроется */
+
+  /* Устанавливаем одну общую, быструю и плавную transition */
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out,
+    padding 0.3s ease-in-out; /* Добавьте padding для более полного эффекта */
+
+  background-color: var(--mobile-dropdown-bg);
+  padding: 0 15px; /* Вертикальный паддинг = 0 по умолчанию */
   margin-bottom: 5px;
+  border-radius: 8px;
+}
+
+/* Стили для открытого состояния */
+.company-dropdown.open,
+.buyers-dropdown.open {
+  /* Состояние: открыто */
+  max-height: 500px; /* Достаточно большое значение */
+  opacity: 1;
+  visibility: visible; /* Делаем видимым, как только класс 'open' добавлен */
+  padding-top: 10px; /* Вертикальный паддинг при открытии */
+  padding-bottom: 10px;
 }
 
 .company-dropdown a,
